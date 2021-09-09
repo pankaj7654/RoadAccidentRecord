@@ -1,0 +1,163 @@
+#map {
+    width: 480px;
+    height: 500px;
+    border: 10px inset #e5e4e2;
+}
+
+body {
+    background-color: #fff;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    font-size: 13pt;
+    text-align: center;
+    font-family: "Arial";
+    margin: 0;
+    padding: 0;
+    animation: Gradient 30s ease infinite;
+    height: 100%;
+
+}
+
+table, th, td {
+    border: 1px solid #fff;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.error {
+    color: red;
+    font-size: 18;
+}
+
+::-webkit-input-placeholder {
+    font-style: italic;
+}
+
+:-moz-placeholder {
+    font-style: italic;
+}
+
+::-moz-placeholder {
+    font-style: italic;
+}
+
+:-ms-input-placeholder {
+    font-style: italic;
+}
+
+#pac-input {
+    font-family: Roboto;
+    color: black;
+    font-size: 15px;
+    font-weight: 300;
+    margin-left: 12px;
+    padding: 0 11px 0 13px;
+    text-overflow: ellipsis;
+    width: 400px;
+    height: 30px;
+    background-color: #fff;
+    opacity: 1
+
+}
+
+.container1 {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 13pt;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.container1 input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background-color: #fff;
+    border: 2px outset #e5e4e2;
+}
+
+/* On mouse-over, add a grey background color */
+.container1:hover input ~ .checkmark {
+    background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.container1 input:checked ~ .checkmark {
+    background-color: #2196F3;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the checkmark when checked */
+.container1 input:checked ~ .checkmark:after {
+    display: block;
+}
+
+.form-horizontal .control-label{
+  text-align: left;
+}
+/* Style the checkmark/indicator */
+.container1 .checkmark:after {
+    left: 7px;
+    top: 3px;
+    width: 3px;
+    height: 8px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+#pac-input:focus {
+    border-color: #4d90fe;
+}
+
+#div1, #div2 {
+    display: inline;
+}
+.backimg{
+    /* background-image: url("https://img.huffingtonpost.com/asset/56efdf821e00008700704c6b.gif?ops=scalefit_630_noupscale.gif"); */
+        height:50vh;
+        /* background: linear-gradient(rgba(0,0,0,.8),rgba(0,0,0,.8)) ,url(https://img.huffingtonpost.com/asset/56efdf821e00008700704c6b.gif?ops=scalefit_630_noupscale.gif); */
+        background-size:cover;
+        color:white;
+        padding-top: 90px;
+}
+.logoimg{
+    background-size:cover;
+    /* opacity: 0.5;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1; */
+}
