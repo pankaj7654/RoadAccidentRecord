@@ -41,21 +41,24 @@ function validateForm(form){
   var name = values.name.value;
   token = values.csrfmiddlewaretoken.value;
   var message = null
-  var email = values.email.value;
   var phone = values.phone.value;
+  var email = values.email.value;
   var password = values.password.value;
 
 
   
   if (!name.trim()) {
     message = "Name is required.";
-  } else if (!email.trim()) {
-    message = "Email is required.";
-  } else if (!password.trim()) {
-    message = "Password is required.";
-  } else if (!phone.trim()) {
+  } 
+  else if (!phone.trim()) {
     message = "Phone is required.";
   }
+  else if (!email.trim()) {
+    message = "Email is required.";
+  } 
+  else if (!password.trim()) {
+    message = "Password is required.";
+  } 
 
   return message
 

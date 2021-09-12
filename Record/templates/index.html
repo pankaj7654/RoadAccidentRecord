@@ -8,52 +8,55 @@
 
 <!doctype html>
 <html lang="en">
-    
-    <div class="container-fluid backimg">
-        <!-- <div>
+
+<div class="container-fluid backimg">
+    <!-- <div>
             <img src="/Record/utils/logo.png" style="height: 100%; width: 100%;"/>
         </div> -->
-        <div>
-            <img class="logoimg" src="https://lh3.googleusercontent.com/proxy/y2U5i6hhyPWN4Ix-EqF1G6fJ5fncIKowNh4abh8ift3GuHLJTmrY7UrtVb0C8iy_XhzP73TuAMpyfCiaAkzRBS5fJEbZ.gif">
-        </div>
+    <div>
+        <img class="w-5 h-5 logoimg"
+            src="https://www.kapurthalapolice.gov.in/uploads/logo-210102175359-punjab-police-logo.png">
     </div>
+</div>
+
 <body>
-<div class="container-fluid p-0 mx-auto">
-        
+    <div class="container-fluid p-0 mx-auto">
+
         <form class="form-horizontal p-0" id="form1" enctype="multipart/form-data" method="post" action="/formdata/">
 
             {% csrf_token %}
 
+
             <div class="container-fluid p-1" style="align-content: center;margin: 0 auto" id="div-id-name">
 
                 <div>
-                    <h1 class="text-white"
+                    <h1 class="text-white roadAccidentHeading"
                         style="font-size:200%;width: 100%;text-align:  center;opacity: 1; background-color: #0099cc; text-emphasis-color: #56E7FF; margin: 0;padding-top:10px; padding-bottom: 10px;">
                         <b>ROAD ACCIDENT RECORDING FORM </b>
                     </h1>
                 </div>
                 <div>
                     <h1
-                        style="font-size:150%;width: 100%;text-align:  left;opacity: 1;background-color: #c0c0c0; color: #0099cc;margin-top: 0;padding-top: 10px; padding-bottom: 10px ">
+                        style="font-size:150%;width: 100%;text-align:  left;opacity: 1; background-color: #c0c0c0;  color: #0099cc;padding-top: 10px;padding-bottom: 10px">
                         &emsp;A. Accident Details</h1>
                 </div>
 
                 <!--Fire no-->
                 <div style="padding: 20px">
                     <div class="cont1 row">
-                        <div class="form-group col-sm-4 col-lg-5">
+                        <div class="form-group col-sm-6 col-lg-6">
                             <div class="row">
-                                <label class="control-label col-sm-5">&emsp;<b>1. FIR NO.</b></label>
+                                <label class="control-label col-sm-5"><b>1. FIR NO.</b></label>
                                 <div class="col-sm-7">
-                                    <input class="form-control" type="text" name="FIRNO">
+                                    <input class="form-control" type="text" name="fireno">
                                 </div>
                             </div>
                         </div>
-                        <div class="form-group col-sm-4 col-lg-7">
+                        <div class="form-group col-sm-6 col-lg-6">
                             <div class="row">
-                                <label class="control-label col-sm-5">&emsp;<b>1. IPC/CrPC Sections.</b></label>
+                                <label class="control-label col-sm-5"><b>1. IPC/CrPC Sections.</b></label>
                                 <div class="col-sm-7">
-                                    <input class="form-control" type="text" name="FIRNO">
+                                    <input class="form-control" type="text" name="ipc">
                                 </div>
                             </div>
                         </div>
@@ -64,15 +67,17 @@
 
                     <!--date of fire-->
                     <div class="cont1 row">
-                           <!--date of ipc-->
-                           <div class="form-group col-sm-4 col-lg-5">
+                        <!--date of ipc-->
+                        <div class="form-group col-sm-6 col-lg-6">
                             <div class="row">
-                                <label class="control-label col-sm-5">&emsp;<b>3. Date of Offence  </b></label>
+                                <label class="control-label col-sm-5"><b>3. Date of Offence </b></label>
                                 <div class="col-sm-7">
-                                    <input class="form-control" type="date" name="Date" value="" onclick="myFunction()">
+                                    <input class="form-control" type="date" name="Dateoffence" value=""
+                                        onclick="myFunction()">
                                 </div>
                             </div>
                         </div>
+
 
                         <script>
                             function myFunction() {
@@ -81,76 +86,130 @@
                             }
                         </script>
 
-                        <div class="form-group col-sm-4 col-lg-7">
+
+
+                        <div class="form-group col-sm-6 col-lg-6">
                             <div class="row">
-                                <label class="control-label col-sm-5">&emsp;<b>2. Time of Offence</b></label>
+                                <label class="control-label col-sm-5"><b>3. Date of FIR/CrPC/DDR</b></label>
                                 <div class="col-sm-7">
-                                    <input class="form-control" type="time" name="Time" id="timepicker1" placeholder="">
+                                    <input class="form-control" type="date" name="Dateoffence" value=""
+                                        onclick="myFunction()">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <script>
+                        function myFunction() {
+                            var x = document.getElementById("Date").value;
+                            document.getElementById("demo").innerHTML = x;
+                        }
+                    </script>
+
+
+
+                    <div class="cont1 row">
+                        <!--date of ipc-->
+                        <div class="form-group col-sm-6 col-lg-6">
+                            <div class="row">
+                                <label class="control-label col-sm-5"><b>5. Day</b></label>
+                                <div class="col-sm-7">
+                                    <select name="PropertyDamage" class="form-control">
+                                        <option value="" disabled selected>Select Option</option>
+                                        <option value="monday">Monday</option>
+                                        <option value="tuesday">Tuesday</option>
+                                        <option value="wednessday">Wednessday</option>
+                                        <option value="throusday">Throusday</option>
+                                        <option value="friday">Friday</option>
+                                        <option value="saturday">Saturday</option>
+                                        <option value="sunday">Sunday</option>
+                                    </select>
                                 </div>
                             </div>
                         </div>
 
 
-                        <script src="//code.jquery.com/jquery-1.10.2.js"></script>
-                        <script src="//code.jquery.com/ui/1.11.3/jquery-ui.js"></script>
 
-                        <!-- Updated JavaScript url -->
-                        <script src="dist/jquery-clockpicker.js"></script>
-
-
-                        <script>
-                            $(function () {
-                                $('#timepicker1').clockpicker({
-                                    default: 'now',
-                                    donetext: 'Done',
-                                    autoclose: true
-                                });
-                            });
-                        </script>
+                        <div class="form-group col-sm-6 col-lg-6">
+                            <div class="row">
+                                <label class="control-label col-sm-5"><b>2. Time of Offence</b></label>
+                                <div class="col-sm-7">
+                                    <input class="form-control" type="time" name="Timeoffence" id="timepicker1"
+                                        placeholder="">
+                                </div>
+                            </div>
+                        </div>
                     </div>
+
+
+
+                    <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+                    <script src="//code.jquery.com/ui/1.11.3/jquery-ui.js"></script>
+
+                    <!-- Updated JavaScript url -->
+                    <script src="dist/jquery-clockpicker.js"></script>
+
+
+                    <script>
+                        $(function () {
+                            $('#timepicker1').clockpicker({
+                                default: 'now',
+                                donetext: 'Done',
+                                autoclose: true
+                            });
+                        });
+                    </script>
+
 
 
 
 
                     <div class="cont1 row">
-                        <div class="form-group col-sm-6 col-lg-5">
+                        <div class="form-group col-sm-6 col-lg-6">
                             <div class="row">
-                                <label class="control-label col-sm-5">&emsp;<b>6. District</b></label>
+                                <label class="control-label col-sm-5"><b>6. District</b></label>
                                 <div class="col-sm-7">
                                     <select name="State" class="form-control">
                                         <option value="" disabled selected>Select Option</option>
-                                        <option value="Andaman And Nicobar Islands">Andaman And Nicobar Islands
-                                        </option>
-                                        <option value="AndhraPradesh">Andhra Pradesh</option>
-                                        <option value="ArunachalPradesh">Arunachal Pradesh</option>
-                                        <option value="Assam">Assam</option>
-                                        <option value="Bihar">Bihar</option>
-                                        <option value="Chandigarh">Chandigarh</option>
-                                        <option value="Chhattisgarh">Chhattisgarh</option>
-                                        <option value="Dadra And Nagar Haveli">Dadra And Nagar Haveli</option>
-                                        <option value="Daman And Diu">Daman And Diu</option>
-                                        <option value="Delhi">Delhi</option>
-                                        <option value="Goa">Goa</option>
-                                        <option value="Gujarat">Gujarat</option>
-                                        <option value="Haryana">Haryana</option>
-                                        <option value="Himachal Pradesh">Himachal Pradesh</option>
-                                        <option value="Jammu And Kashmir">Jammu And Kashmir</option>
-                                        <option value="Jharkhand">Jharkhand</option>
-                                        <option value="Karnataka">Karnataka</option>
-                                        <option value="Kerala">Kerala</option>
-                                        <option value="Lakshadweep">Lakshadweep</option>
-                                        <option value="Madhya Pradesh">Madhya Pradesh</option>
-                                        <option value="Maharashtra">Maharashtra</option>
-                                        <option value="Manipur">Manipur</option>
-                                        <option value="Meghalaya">Meghalaya</option>
+                                        <option value="Andaman And Nicobar Islands">Amritsar</option>
+                                        <option value="AndhraPradesh">Barnala</option>
+                                        <option value="ArunachalPradesh">Bathinda</option>
+                                        <option value="Assam">Faridkot</option>
+                                        <option value="Bihar">Fatehgarh Sahib</option>
+                                        <option value="Chandigarh">Fazilka</option>
+                                        <option value="Chhattisgarh">Ferozepur</option>
+                                        <option value="Dadra And Nagar Haveli">Gurdaspur</option>
+                                        <option value="Daman And Diu">Hoshiarpur</option>
+                                        <option value="Delhi">Jalandhar</option>
+                                        <option value="Goa">Kapurthala</option>
+                                        <option value="Gujarat">Ludhiana</option>
+                                        <option value="Haryana">Mansa</option>
+                                        <option value="Himachal Pradesh">Moga</option>
+                                        <option value="Jammu And Kashmir">Muktsar</option>
+                                        <option value="Jharkhand">Nawanshahr (Shahid Bhagat Singh Nagar)</option>
+                                        <option value="Karnataka">Pathankot</option>
+                                        <option value="Kerala">Patiala</option>
+                                        <option value="Lakshadweep">Rupnagar</option>
+                                        <option value="Madhya Pradesh">Sahibzada Ajit Singh Nagar (Mohali)</option>
+                                        <option value="Maharashtra">Sangrur</option>
+                                        <option value="Manipur">Tarn Taran</option>
+
                                     </select>
                                     <!-- <input type="text" name="District" class="form-control"> -->
                                 </div>
                             </div>
                         </div>
-                        <div class="form-group col-sm-6 col-lg-7">
+                        <div class="form-group col-sm-6 col-lg-6">
                             <div class="row">
-                                <label class="control-label col-sm-5">&emsp;<b>7. State</b></label>
+                                <label class="control-label col-sm-5"><b>5. Police Station</b></label>
+                                <div class="col-sm-7">
+                                    <input class="form-control" type="text" name="PoliceStation">
+                                </div>
+                            </div>
+                        </div>
+                        <!-- <div class="form-group col-sm-6 col-lg-6">
+                            <div class="row">
+                                <label class="control-label col-sm-5"><b>7. State</b></label>
                                 <div class="col-sm-7">
                                     <select name="State" class="form-control">
                                         <option value="" disabled selected>Select Option</option>
@@ -193,42 +252,50 @@
                                     </select>
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
                     </div>
 
 
 
-                        <div class="cont1 row">
-                            <div class="form-group col-sm-4 col-lg-5">
-                                <div class="row">
-                                    <label class="control-label col-sm-5">&emsp;<b>5. Police Station</b></label>
-                                    <div class="col-sm-7">
-                                        <input class="form-control" type="text" name="PoliceStation">
-                                    </div>
-                                </div>
-                            </div>
 
-                            <div class="form-group col-sm-6 col-lg-7">
-                                <div class="row">
-                                    <label class="control-label col-sm-5">&emsp;<b>5. First Vehical</b></label>
-                                    <div class="col-sm-7">
-                                        <input class="form-control" type="text" name="PoliceStation">
-                                    </div>
+                    <div class="cont1 row">
+                        <div class="form-group col-sm-6 col-lg-6">
+                            <div class="row">
+                                <label class="control-label col-sm-5"><b>5. First Vehical</b></label>
+                                <div class="col-sm-7">
+                                    <select name="PropertyDamage" class="form-control">
+                                        <option value="" disabled selected>Select Option</option>
+                                        <option value="twowheeler">Two wheeler</option>
+                                        <option value="threewheelerp">Three Wheeler(Passenger)</option>
+                                        <option value="threewheelerg">Three Wheeler(Goods)</option>
+                                        <option value="car">Car/Jeep/Van/Taxi</option>
+                                        <option value="buss">Buss</option>
+                                        <option value="commercialvehical">Light Commercial Vehicle</option>
+                                        <option value="multivehical">Multi Axle Vehicle</option>
+                                        <option value="tractor">Tractor/Trolley</option>
+                                        <option value="machinery">Construction Machinery</option>
+                                        <option value="cycle">Cyclist</option>
+                                        <option value="animaldriven">Animal Driven</option>
+                                        <option value="ricksaw">Cycle Ricksaw</option>
+                                        <option value="singlevehical">Single Vehical</option>
+                                        <option value="others">Others</option>
+                                        <option value="unknown">Unknown</option>
+                                    </select>
                                 </div>
                             </div>
                         </div>
-                    
+                    </div>
+
 
                     <div class="cont1 row">
                         <div class="form-group col-sm-12">
                             <div class="row">
-                                <label class="control-label col-sm-3">&emsp;<b>10. No. of Fatalties</b></label>
+                                <label class="control-label col-sm-3"><b>10. No. of Fatalties</b></label>
                                 <div class="col-sm-1">
                                     <input type="number" name="Nooffatalties" class="form-control">
                                 </div>
 
-                                <label class="control-label col-sm-3"><b>No. of Persons Grievously
-                                        Injured</b></label>
+                                <label class="control-label col-sm-3"><b>No. of Persons Serious Injured</b></label>
                                 <div class="col-sm-1">
                                     <input type="number" name="Noofpersonsgrievouslyinjured" class="form-control">
                                 </div>
@@ -242,78 +309,133 @@
 
                     </div>
 
+
+
+
+
                     <div class="cont1 row">
-                        <div class="form-group col-sm-6">
+                        <div class="form-group col-sm-6 col-lg-6">
                             <div class="row">
-                                <label class="control-label col-sm-5">&emsp;<b>11. Property Damage</b></label>
+                                <label class="control-label col-sm-5"><b>5. First Vehical</b></label>
                                 <div class="col-sm-7">
                                     <select name="PropertyDamage" class="form-control">
                                         <option value="" disabled selected>Select Option</option>
-                                        <option value="Public">Public</option>
-                                        <option value="Private">Private</option>
-                                        <option value="Public And Private">Public And Private</option>
-                                        <option value="Others">Others</option>
+                                        <option value="twowheeler2">Two wheeler</option>
+                                        <option value="threewheelerp2">Three Wheeler(Passenger)</option>
+                                        <option value="threewheelerg2">Three Wheeler(Goods)</option>
+                                        <option value="car2">Car/Jeep/Van/Taxi</option>
+                                        <option value="buss2">Buss</option>
+                                        <option value="commercialvehical2">Light Commercial Vehicle</option>
+                                        <option value="multivehical2">Multi Axle Vehicle</option>
+                                        <option value="tractor2">Tractor/Trolley</option>
+                                        <option value="machinery2">Construction Machinery</option>
+                                        <option value="cycle2">Cyclist</option>
+                                        <option value="animaldriven2">Animal Driven</option>
+                                        <option value="ricksaw2">Cycle Ricksaw</option>
+                                        <option value="singlevehical2">Single Vehical</option>
+                                        <option value="others2">Others</option>
+                                        <option value="unknown2">Unknown</option>
                                     </select>
                                 </div>
                             </div>
                         </div>
-
                     </div>
 
+
                     <div class="cont1 row">
-                        <div class="form-group col-sm-6">
+                        <div class="form-group col-sm-12">
                             <div class="row">
-                                <label class="control-label col-sm-10">&emsp;<b>12. (a) No. of Motorized Vehicles
-                                        Involved</b></label>
-                                <div class="col-sm-2">
-                                    <input type="number" name="NoofMotorizedVehiclesinvolved" class="form-control">
+                                <label class="control-label col-sm-3"><b>10. No. of Fatalties</b></label>
+                                <div class="col-sm-1">
+                                    <input type="number" name="Nooffatalties" class="form-control">
                                 </div>
-                            </div>
-                        </div>
 
-                        <div class="form-group col-sm-6">
-                            <div class="row">
-                                <label class="control-label col-sm-10">&emsp;&emsp;<b>(b) No. of Non Motorized
-                                        Vehicles Involved</b></label>
-                                <div class="col-sm-2">
-                                    <input type="number" name="NoofNonMotorizedVehiclesinvolved" class="form-control">
+                                <label class="control-label col-sm-3"><b>No. of Persons Serious Injured</b></label>
+                                <div class="col-sm-1">
+                                    <input type="number" name="Noofpersonsgrievouslyinjured" class="form-control">
                                 </div>
-                            </div>
-                        </div>
 
-                        <div class="form-group col-sm-6">
-                            <div class="row">
-                                <label class="control-label col-sm-10">&emsp;&emsp;&emsp;<b>(c) No. of Pedestrians
-                                        Involved</b></label>
-                                <div class="col-sm-2">
-                                    <input type="number" name="Noofpedestriansinvolved" class="form-control">
+                                <label class="control-label col-sm-3"><b>No. of Persons Minor Injured</b></label>
+                                <div class="col-sm-1">
+                                    <input type="number" name="Noofpersonsminorinjured" class="form-control">
                                 </div>
                             </div>
                         </div>
 
                     </div>
+
+
+
+
+
+
                     <div class="cont1 row">
-                        <div class="form-group col-sm-6">
+                        <div class="form-group col-sm-6 col-lg-6">
                             <div class="row">
-                                <label class="control-label col-sm-5">&emsp;<b>13. Type of Weather</b></label>
+                                <label class="control-label col-sm-5"><b>15. Maneuver type as per FIR</b></label>
                                 <div class="col-sm-7">
                                     <select name="Weather" class="form-control">
                                         <option value="" disabled selected>Select Option</option>
-                                        <option value="Sunny/Clear">Sunny/Clear</option>
-                                        <option value="Rainy">Rainy</option>
-                                        <option value="Foggy/Misty">Foggy/Misty</option>
-                                        <option value="Hail/Sleet">Hail/Sleet</option>
-                                        <option value="Other">Other</option>
+                                        <option value="overspeed">Overspeed</option>
+                                        <option value="roughdriving">Rough Driving</option>
+                                        <option value="wrongparking">Wrong Parking</option>
+                                        <option value="wrongside">Approching From Wrong Side</option>
+                                        <option value="redlight">Jumping Red Light</option>
+                                        <option value="fallenbuss">Fallen Off The Buss/Tractor</option>
+                                        <option value="fallenauto">Fallen Off The Auto/Ricksaw</option>
+                                        <option value="highlight">Due to High Beam Lights</option>
+                                        <option value="potholes">Due to Potholes</option>
+                                        <option value="animal">Due to Animal</option>
+                                        <option value="other">Other</option>
+                                        <option value="unknown">Unknown(Only if nothing mentioned in the FIR)
+                                        </option>
                                     </select>
                                 </div>
                             </div>
                         </div>
 
-                    </div>
-                    <div class="cont1 row">
-                        <div class="form-group col-sm-6">
+                        <div class="form-group col-sm-6 col-lg-6">
                             <div class="row">
-                                <label class="control-label col-sm-5">&emsp;<b>14. Hit and Run</b></label>
+                                <label class="control-label col-sm-5"><b>5. Place/Location of Occurrence</b></label>
+                                <div class="col-sm-7">
+                                    <input class="form-control" type="text" name="PoliceStation">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+
+
+                    <div class="cont1 row">
+                        <div class="form-group col-sm-6 col-lg-6">
+                            <div class="row">
+                                <label class="control-label col-sm-5"><b>13. Type of Collision</b></label>
+                                <div class="col-sm-7">
+                                    <select name="Weather" class="form-control">
+                                        <option value="" disabled selected>Select Option</option>
+                                        <option value="headon">Head On</option>
+                                        <option value="hitfromback">Hit From Back</option>
+                                        <option value="hitfromside">Hit from Side</option>
+                                        <option value="hitpedestrain">Hit Pedstrain</option>
+                                        <option value="overturning">Overturning</option>
+                                        <option value="skidding">Skidding</option>
+                                        <option value="hitfixed">Hit Fixed Object</option>
+                                        <option value="hitanimal">Hit Animal</option>
+                                        <option value="runoffroad">Run Off Road</option>
+                                        <option value="hitparked">Hit Parked Vehical</option>
+                                        <option value="other">Other</option>
+                                        <option value="unknown">Unknown</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group col-sm-6 col-lg-6">
+                            <div class="row">
+                                <label class="control-label col-sm-5"><b>14. Hit and Run</b></label>
                                 <div class="col-sm-7">
                                     <select name="HitandRun" class="form-control">
                                         <option value="" disabled selected>Select Option</option>
@@ -323,68 +445,12 @@
                                 </div>
                             </div>
                         </div>
-
-                    </div>
-                    <div class="cont1 row">
-                        <label style="text-align:left !important"><br><b>15. Type of Collision&ensp;</b> <i>( click
-                                on the option(s) to select
-                                )</i></label><br>
-                    </div>
-
-                    <div class="cont1 table-responsive">
-                        <br>
-                        <table class="table">
-                            <tr>
-                                <td class="col-sm-4"><label class="container1"></span><input type="checkbox"
-                                            name="Typeofcollision[]" value="Pedestrian">&emsp;Pedestrian<span
-                                            class="checkmark"></span></label></td>
-                                <td class="col-sm-4"><label class="container1"><input type="checkbox"
-                                            name="Typeofcollision[]" value="Hit from Back">&emsp;Hit
-                                        from Back<span class="checkmark"></span></label></td>
-                                <td class="col-sm-4"><label class="container1"><input type="checkbox"
-                                            name="Typeofcollision[]" value="Hit from Side">&emsp;Hit
-                                        from Side<span class="checkmark"></span></label></td>
-
-                            </tr>
-                            <tr>
-                                <td class="col-sm-4"><label class="container1"><input type="checkbox"
-                                            name="Typeofcollision[]" value="Run off road">&emsp;Run
-                                        off Road<span class="checkmark"></span></label></td>
-                                <td class="col-sm-4"><label class="container1"><input type="checkbox"
-                                            name="Typeofcollision[]" value="With Animal">&emsp;With
-                                        Animal<span class="checkmark"></span></label></td>
-                                <td class="col-sm-4"><label class="container1"><input type="checkbox"
-                                            name="Typeofcollision[]" value="With Parked Vehicle">&emsp;With
-                                        Parked Vehicle<span class="checkmark"></span></label></td>
-                            </tr>
-
-                            <tr>
-                                <td class="col-sm-4"><label class="container1"><input type="checkbox"
-                                            name="Typeofcollision[]"
-                                            value="Fixed/Stationary object">&emsp;Fixed/Stationary
-                                        Object<span class="checkmark"></span></label></td>
-                                <td class="col-sm-4"><label class="container1"><input type="checkbox"
-                                            name="Typeofcollision[]" value="Vehicle Overturn">&emsp;Vehicle
-                                        Overturn<span class="checkmark">
-                                        </span></label></td>
-                                <td class="col-sm-4"><label class="container1"><input type="checkbox"
-                                            name="Typeofcollision[]" value="Head on Collision">&emsp;Head
-                                        on Collision<span class="checkmark"></span></label></td>
-                            </tr>
-
-                            <tr>
-                                <td class="col-sm-12" colspan="3">
-                                    <div id="div1" style="width: 100%"><label class="container1"><input type="checkbox"
-                                                name="Typeofcollision[]" value="Others">&emsp;Others&emsp;<input
-                                                type="text" name="othersOne" id="othersOne"
-                                                style="width: 800px; background-color: #fff;opacity: 1;height: 20px;font-size: 12pt;padding: 5px;border: 0px solid black"
-                                                ; placeholder="(Specify here)"><span class="checkmark"></span></label>
-                                    </div>
-                                </td>
-                            </tr>
-                        </table>
                     </div>
                 </div>
+                <br>
+
+
+
                 <div>
                     <h1
                         style="font-size:150%;width: 100%;text-align:  left;opacity: 1; background-color: #c0c0c0;  color: #0099cc;padding-top: 10px;padding-bottom: 10px">
@@ -394,7 +460,7 @@
                     <div class="cont1 row">
                         <div class="form-group col-sm-6">
                             <div class="row">
-                                <label class="control-label col-sm-5">&emsp;<b>16. Road Name</b></label>
+                                <label class="control-label col-sm-5"><b>16. Road Name</b></label>
                                 <div class="col-sm-7">
                                     <input type="text" name="RoadName" class="form-control">
                                 </div>
@@ -403,7 +469,7 @@
 
                         <div class="form-group col-sm-6">
                             <div class="row">
-                                <label class="control-label col-sm-5">&emsp;&emsp;<b>17. Road Number</b></label>
+                                <label class="control-label col-sm-5"><b>17. Road Number</b></label>
                                 <div class="col-sm-7">
                                     <input type="number" name="RoadNumber" class="form-control">
                                 </div>
@@ -412,7 +478,7 @@
 
                         <div class="form-group col-sm-6">
                             <div class="row">
-                                <label class="control-label col-sm-5">&emsp;<b>18. Landmark</b></label>
+                                <label class="control-label col-sm-5"><b>18. Landmark</b></label>
                                 <div class="col-sm-7">
                                     <input type="text" name="landmark" class="form-control">
                                 </div>
@@ -421,30 +487,18 @@
 
                         <div class="form-group col-sm-6">
                             <div class="row">
-                                <label class="control-label col-sm-5">&emsp;&emsp;<b>19. Road Chainage</b></label>
+                                <label class="control-label col-sm-5"><b>14. Road Category</b></label>
                                 <div class="col-sm-7">
-                                    <input type="text" name="RoadChainage" class="form-control">
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                    
-
-                    < class="cont1 row">
-                        <div class="form-group col-sm-6">
-                            <div class="row">
-                                <label class="control-label col-sm-4"><br>&emsp;&emsp;<b>21. Lanes</b></label>
-                                <div class="col-sm-7">
-                                    <br><select name="Lanes" class="form-control">
+                                    <select name="HitandRun" class="form-control">
                                         <option value="" disabled selected>Select Option</option>
-                                        <option value="Single Lane">Single Lane</option>
-                                        <option value="Double Lane">Double Lane</option>
-                                        <option value="More than 2 lanes without central divider">More than 2 lanes
-                                            without central divider
-                                        </option>
-                                        <option value="More than 3 lanes with central divider">More than 3 lanes
-                                            with central divider
+                                        <option value="nh">NH</option>
+                                        <option value="sh">SH</option>
+                                        <option value="mdr">MDR</option>
+                                        <option value="odr">ODR</option>
+                                        <option value="pmgsy">Village Road/Link Road (PMGSY)</option>
+                                        <option value="municipality">Municipality Road</option>
+                                        <option value="expressway">Expressway</option>
+                                        <option value="unknown">Unknown (Only if Location is not available)
                                         </option>
                                     </select>
                                 </div>
@@ -453,48 +507,30 @@
 
                         <div class="form-group col-sm-6">
                             <div class="row">
-                                <label class="control-label col-sm-6"><br>&emsp;&emsp;<b>22. Surface
-                                        Condition</b></label>
-                                <div class="col-sm-6">
-                                    <br><select name="SurfaceCondition" class="form-control">
-                                        <option value="" disabled selected>Select Option</option>
-                                        <option value="Paved">Paved</option>
-                                        <option value="Unpaved">Unpaved</option>
-                                    </select>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-sm-12">
-                            <br><b>23. Road Type</b><br><br>
-                        </div>
-
-                        <br>
-                        <div class="form-group col-sm-6">
-                            <div class="row">
-                                <label class="control-label col-sm-5">&emsp;&emsp;<b>(a)</b></label>
+                                <label class="control-label col-sm-5"><b>18. Road Type</b></label>
                                 <div class="col-sm-7">
-                                    <select name="RoadTypea" class="form-control">
+                                    <select name="HitandRun" class="form-control">
                                         <option value="" disabled selected>Select Option</option>
-                                        <option value="Expressway">Expressway</option>
-                                        <option value="National Highway">National Highway</option>
-                                        <option value="State Highway">State Highway</option>
-                                        <option value="District Road">District Road</option>
-                                        <option value="Village Road">Village Road</option>
-                                        <option value="Others">Other Roads</option>
+                                        <option value="dividedroad">Divided Road</option>
+                                        <option value="undividedroad">Undivided Road</option>
+                                        <option value="unknown">Unknown (Only if Location is not available)
+                                        </option>
                                     </select>
                                 </div>
                             </div>
                         </div>
 
+
                         <div class="form-group col-sm-6">
                             <div class="row">
-                                <label class="control-label col-sm-5">&emsp;<b>(b)</b></label>
+                                <label class="control-label col-sm-5"><b>18.Intersection/Mid Block</b></label>
                                 <div class="col-sm-7">
-                                    <select name="RoadTypeb" class="form-control">
+                                    <select name="HitandRun" class="form-control">
                                         <option value="" disabled selected>Select Option</option>
-                                        <option value="Urban">Urban</option>
-                                        <option value="Non Urban">Non Urban</option>
+                                        <option value="intersection">Intersection</option>
+                                        <option value="midblock">Mid Block</option>
+                                        <option value="unknown">Unknown (Only if Location is not available)
+                                        </option>
                                     </select>
                                 </div>
                             </div>
@@ -502,13 +538,21 @@
 
                         <div class="form-group col-sm-6">
                             <div class="row">
-                                <label class="control-label col-sm-5">&emsp;&emsp;<b>24. Physical
-                                        Divider</b></label>
+                                <label class="control-label col-sm-5"><b>19. Junction Type</b></label>
                                 <div class="col-sm-7">
-                                    <select name="PhysicalDivider" class="form-control">
+                                    <select name="HitandRun" class="form-control">
                                         <option value="" disabled selected>Select Option</option>
-                                        <option value="Yes">Yes</option>
-                                        <option value="No">No</option>
+                                        <option value="arm">Four Arm Intersection</option>
+                                        <option value="tjunction">T-Junction</option>
+                                        <option value="yjunction">y-Junction</option>
+                                        <option value="staggered">Staggered Juntion</option>
+                                        <option value="vehicular">Vehicular</option>
+                                        <option value="pedestrain">Pedestrian Underpass</option>
+                                        <option value="rotary">Roundabout/Rotary</option>
+                                        <option value="other">Other</option>
+                                        <option value="not">Not Applicable (If Mid Block)</option>
+                                        <option value="unknown">Unknown (Only if Location is not available)
+                                        </option>
                                     </select>
                                 </div>
                             </div>
@@ -516,153 +560,221 @@
 
                         <div class="form-group col-sm-6">
                             <div class="row">
-                                <label class="control-label col-sm-6">&emsp;&emsp;<b>25. Ongoing Road
-                                        Works</b></label>
-                                <div class="col-sm-6">
-                                    <select name="OngoingRoadWorksConstruction" class="form-control">
-                                        <option value="" disabled selected>Select Option</option>
-                                        <option value="Yes">Yes</option>
-                                        <option value="No">No</option>
-                                    </select>
-                                </div>
-                            </div>
-                        </div>
-
-
-                        <div class="form-group col-sm-6">
-                            <div class="row">
-                                <label class="control-label col-sm-5">&emsp;&emsp;<b>26. Speed Limit</b></label>
+                                <label class="control-label col-sm-5"><b>18. Rural/Urban</b></label>
                                 <div class="col-sm-7">
-                                    <select name="SpeedLimit" class="form-control">
+                                    <select name="HitandRun" class="form-control">
                                         <option value="" disabled selected>Select Option</option>
-                                        <option value="<40">less than 40</option>
-                                        <option value="40-60">40-60</option>
-                                        <option value="60-80">60-80</option>
-                                        <option value=">80">greater than 80</option>
+                                        <option value="rural">Rural</option>
+                                        <option value="urban">Urban</option>
+                                        <option value="unknown">Unknown (Only if Location is not available)
+                                        </option>
                                     </select>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="form-group col-sm-6">
-                            <div class="row">
-                                <label class="control-label col-sm-8">&emsp;&emsp;<b>27.Visibilty at the Time of
-                                        Accident</b></label>
-                                <div class="col-sm-4">
-                                    <select name=" VisibiltyattheTimeofAccident" class="form-control">
-                                        <option value="" disabled selected>Select Option</option>
-                                        <option value="Good">Good</option>
-                                        <option value="Poor">Poor</option>
-                                        <option value="Not Known">Not Known</option>
-                                    </select>
-                                </div>
-                            </div>
-                        </div>
 
                         <div class="form-group col-sm-6">
                             <div class="row">
-                                <label class="control-label col-sm-5">&emsp;&emsp;<b>28. Accident Spot</b></label>
+                                <label class="control-label col-sm-5"><b>18.Medical Response</b></label>
                                 <div class="col-sm-7">
-                                    <select name=" AccidentSpot" class="form-control">
+                                    <select name="HitandRun" class="form-control">
                                         <option value="" disabled selected>Select Option</option>
-                                        <option value="Residential Area">Residential Area</option>
-                                        <option value="Institutional Area">Institutional Area</option>
-                                        <option value="Market/Commercial Area">Market/Commercial Area</option>
-                                        <option value="Open Area">Open Area</option>
-                                        <option value="Other">Other</option>
+                                        <option value="emergency">Emergency Medical Service</option>
+                                        <option value="private">Private Vehicle</option>
+                                        <option value="other">Other (Police Vehicle)</option>
+                                        <option value="unknown">Unknown</option>
                                     </select>
                                 </div>
                             </div>
                         </div>
+
                     </div>
+
                     <div class="cont1 row">
-                        <div class="col-sm-2">
-                            <br><label><b>29. Road Features</b></label>
+                        <div class="form-group col-sm-6">
+                            <div class="row">
+                                <label class="control-label col-sm-5"><b>16. Longitude</b></label>
+                                <div class="col-sm-7">
+                                    <input type="text" name="RoadName" class="form-control">
+                                </div>
+                            </div>
                         </div>
-                    </div>&emsp;&emsp;
-                    <div class="cont1 table-responsive">
-                        <table style=" padding: 30px width:100%" class="table">
-                            <tr>
-                                <td style="padding-bottom: 3px">
-                                    <label class="container1"><input type="checkbox" name="RoadFeature[]"
-                                            value="Straight Road">Straight Road<span class="checkmark"></span></label>
-                                </td>
-                                <td style="padding-bottom: 3px">
-                                    <label class="container1"><input type="checkbox" name="RoadFeature[]"
-                                            value="Curved Road">Curved Road<span class="checkmark"></span></label>
-                                </td>
-                                <td style="padding-bottom: 3px">
-                                    <label class="container1"><input type="checkbox" name="RoadFeature[]"
-                                            value="Bridge">Bridge<span class="checkmark"></span></label>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td style="padding-bottom: 3px">
-                                    <label class="container1"><input type="checkbox" name="RoadFeature[]"
-                                            value="Culvert">Culvert<span class="checkmark"></span></label>
-                                </td>
-                                <td style="padding-bottom: 3px">
-                                    <label class="container1"><input type="checkbox" name="RoadFeature[]"
-                                            value="Pot holes">Pot Holes<span class="checkmark"></span></label>
-                                </td>
-                                <td style="padding-bottom: 3px">
-                                    <label class="container1"><input type="checkbox" name="RoadFeature[]"
-                                            value="Steep Grade">Steep Grade<span class="checkmark"></span></label>
-                                </td>
-                            </tr>
 
-
-                        </table>
+                        <div class="form-group col-sm-6">
+                            <div class="row">
+                                <label class="control-label col-sm-5"><b>16. Latitude</b></label>
+                                <div class="col-sm-7">
+                                    <input type="text" name="RoadName" class="form-control">
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <br><br>
+                </div>
+
+
+
+                <div>
+                    <h1
+                        style="font-size:150%;width: 100%;text-align:  left;opacity: 1; background-color: #c0c0c0;  color: #0099cc;padding-top: 10px;padding-bottom: 10px">
+                        &emsp;C. Persons Details</h1>
+                </div>
+                <div style="padding: 20px">
                     <div class="cont1 row">
-                        <div class="form-group col-sm-10">
+                        <div class="form-group col-sm-12">
                             <div class="row">
-                                <label class="control-label col-sm-8">&emsp;&emsp;<b>30. Road Junction</b> (fill
-                                    only if the accident is at a junction)</b></label>
-                                <div class="col-sm-4">
-                                    <select name="RoadJunction" class="form-control">
-                                        <option value="" disabled selected>Select Option</option>
-                                        <option value="T Junction">T Junction</option>
-                                        <option value="Y Junction">Y Junction</option>
-                                        <option value="Four Arm Junction">Four Arm Junction</option>
-                                        <option value="Staggered Junction">Staggered Junction</option>
-                                        <option value="Round About Junction">Round About Junction</option>
-                                    </select>
+                                <label class="control-label col-sm-3"><b>Total Fatalities</b></label>
+                                <div class="col-sm-1">
+                                    <input type="number" name="Nooffatalties" class="form-control">
+                                </div>
+
+                                <label class="control-label col-sm-3"><b>Total Serious Injuries</b></label>
+                                <div class="col-sm-1">
+                                    <input type="number" name="Noofpersonsgrievouslyinjured" class="form-control">
+                                </div>
+
+                                <label class="control-label col-sm-3"><b>Total Minor Injuries</b></label>
+                                <div class="col-sm-1">
+                                    <input type="number" name="Noofpersonsminorinjured" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div style="padding: 20px">
+                    <div class="cont1 row">
+                        <div class="form-group col-sm-6">
+                            <div class="row">
+                                <label class="control-label col-sm-5"><b>16. Male Fatalities</b></label>
+                                <div class="col-sm-7">
+                                    <input type="text" name="RoadName" class="form-control">
                                 </div>
                             </div>
                         </div>
 
-                        <div class="form-group col-sm-10">
+                        <div class="form-group col-sm-6">
                             <div class="row">
-                                <label class="control-label col-sm-8">&emsp;&emsp;<b>31. Type of Traffic Control</b>
-                                    (fill only if the accident is at a junction)</b></label>
-                                <div class="col-sm-4">
-                                    <select name=" TypeofTrafficControl" class="form-control">
-                                        <option value="" disabled selected>Select Option</option>
-                                        <option value="Traffic Light Signal">Traffic Light Signal</option>
-                                        <option value="Police Control">Police Control</option>
-                                        <option value="Stop Sign">Stop Sign</option>
-                                        <option value="Flashing Signal/Blinker">Flashing Signal/Blinker</option>
-                                        <option value="Uncontrolled">Uncontrolled</option>
-                                    </select>
+                                <label class="control-label col-sm-5"><b>17. Female
+                                        Fatalities</b></label>
+                                <div class="col-sm-7">
+                                    <input type="number" name="RoadNumber" class="form-control">
                                 </div>
                             </div>
                         </div>
 
-                        <div class="form-group col-sm-10">
+
+
+                        <div class="form-group col-sm-6">
                             <div class="row">
-                                <label class="control-label col-sm-8">&emsp;&emsp;<b>32. Pedestrian Involved </b>(if
-                                    applicable)</b></label>
-                                <div class="col-sm-4">
-                                    <select name="PedestrianInvolved" class="form-control">
-                                        <option value="" disabled selected>Select Option</option>
-                                        <option value="No Facility">No Facility</option>
-                                        <option value="Footpath">Footpath</option>
-                                        <option value="Zebra Crossing">Zebra Crossing</option>
-                                        <option value="Foot Bridge/Subway">Foot Bridge/Subway</option>
-                                        <option value="Not Applicable">Not Applicable</option>
-                                    </select>
+                                <label class="control-label col-sm-5"><b>Less than 18 years Male</b></label>
+                                <div class="col-sm-7">
+                                    <input type="text" name="landmark" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="form-group col-sm-6">
+                            <div class="row">
+                                <label class="control-label col-sm-5"><b>Less than 18 years Female</b></label>
+                                <div class="col-sm-7">
+                                    <input type="text" name="landmark" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group col-sm-6">
+                            <div class="row">
+                                <label class="control-label col-sm-5"><b>(18-25) Male</b></label>
+                                <div class="col-sm-7">
+                                    <input type="text" name="landmark" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="form-group col-sm-6">
+                            <div class="row">
+                                <label class="control-label col-sm-5"><b>(18-25) Female</b></label>
+                                <div class="col-sm-7">
+                                    <input type="text" name="landmark" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group col-sm-6">
+                            <div class="row">
+                                <label class="control-label col-sm-5"><b>(25-45) Male</b></label>
+                                <div class="col-sm-7">
+                                    <input type="text" name="landmark" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="form-group col-sm-6">
+                            <div class="row">
+                                <label class="control-label col-sm-5"><b>(25-45) Female
+                                        Female</b></label>
+                                <div class="col-sm-7">
+                                    <input type="text" name="landmark" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group col-sm-6">
+                            <div class="row">
+                                <label class="control-label col-sm-5"><b>(45-60) Male</b></label>
+                                <div class="col-sm-7">
+                                    <input type="text" name="landmark" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="form-group col-sm-6">
+                            <div class="row">
+                                <label class="control-label col-sm-5"><b>(45-60) Female
+                                        Female</b></label>
+                                <div class="col-sm-7">
+                                    <input type="text" name="landmark" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group col-sm-6">
+                            <div class="row">
+                                <label class="control-label col-sm-5"><b>(60 and above) Male</b></label>
+                                <div class="col-sm-7">
+                                    <input type="text" name="landmark" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="form-group col-sm-6">
+                            <div class="row">
+                                <label class="control-label col-sm-5"><b>(60 and above) Female</b></label>
+                                <div class="col-sm-7">
+                                    <input type="text" name="landmark" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group col-sm-6">
+                            <div class="row">
+                                <label class="control-label col-sm-5"><b>(Age not known) Male</b></label>
+                                <div class="col-sm-7">
+                                    <input type="text" name="landmark" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="form-group col-sm-6">
+                            <div class="row">
+                                <label class="control-label col-sm-5"><b>(Age not known) Female</b></label>
+                                <div class="col-sm-7">
+                                    <input type="text" name="landmark" class="form-control">
                                 </div>
                             </div>
                         </div>
@@ -670,1289 +782,15 @@
                     </div>
                 </div>
 
-                <div>
-                    <h1
-                        style="font-size:150%;width: 100%;text-align:  left;opacity: 1; background-color: #c0c0c0;  color: #0099cc; padding-bottom: 10px; padding-top: 10px">
-                        &emsp;C. Vehicles Involved in the Accident</h1>
-                </div>
-                <div style="padding: 30px">
-                    <div class="table-responsive">
-                        <table class="table">
-                            <tr>
-                                <th>S.No.</th>
-                                <th>Type of Vehicle</th>
-                                <th>Registration No.</th>
-                                <th>Disposition</th>
-                                <th>Load Condition(Passengers)</th>
-                                <th>Load Condition(Goods)</th>
-                                <th>Mechanical Failure</th>
-                                <th>Age of Vehicle</th>
-                            </tr>
-                            <tr>
-                                <td><input type="number" name="a331" style="width: 40px;font-size: 12pt"></td>
-                                <td><select name="a341" style="width:100px ;font-size: 12pt;height: 25px">
-                                        <option value="" disabled selected>Select Option</option>
-                                        <option value="Motorised Two Wheeler">Motorised Two Wheeler</option>
-                                        <option value="Auto Rickshaw">Auto Rickshaw</option>
-                                        <option value="Car/Jeep/Van/Taxi">Car/Jeep/Van/Taxi</option>
-                                        <option value="Bus">Bus</option>
-                                        <option value="Truck/Lorry">Truck/Lorry</option>
-                                        <option value="Heavy Articulated Vehicle/Trolly">Heavy Articulated
-                                            Vehicle/Trolly
-                                        </option>
-                                        <option value="Tempo/Tractor">Tempo/Tractor</option>
-                                        <option value="Bicycle">Bicycle</option>
-                                        <option value="Cycle Rickshaw">Cycle Rickshaw</option>
-                                        <option value="Hand Drawn Cart">Hand Drawn Cart</option>
-                                        <option value="Animal Drawn Cart">Animal Drawn Cart</option>
-                                        <option value="Others">Others</option>
-                                    </select>
-                                </td>
-                                <td><input type="text" style="width: 100px;font-size: 12pt" name="a351"></td>
-                                <td>
-                                    <select name="a361" style="width: 100px;font-size: 12pt;height: 25px">
-                                        <option value="" disabled selected>Select Option</option>
-                                        <option value="Needs to be Towed">Needs to be Towed</option>
-                                        <option value="Can be driven away">Can be driven away</option>
-                                    </select>
-                                </td>
-                                <td><select name="a37A1" style="width: 150px;font-size: 12pt;height: 25px">
-                                        <option value="" disabled selected>Select Option</option>
-                                        <option value="Normally Loaded">Normally Loaded</option>
-                                        <option value="Overloaded/Hanging">Overloaded/Hanging</option>
-                                        <option value="Empty">Empty</option>
-                                        <option value="Not Known">Not Known</option>
-                                    </select></td>
-                                <td><select name="a37B1" style="width: 150px;font-size: 12pt;height: 25px">
-                                        <option value="" disabled selected>Select Option</option>
-                                        <option value="Normally Loaded">Normally Loaded</option>
-                                        <option value="Overloaded/Hanging">Overloaded/Hanging</option>
-                                        <option value="Empty">Empty</option>
-                                        <option value="Not Known">Not Known</option>
-                                    </select></td>
-                                <td><select name="a381" style="width: 90px;font-size: 12pt;height: 25px">
-                                        <option value="" disabled selected>Select Option</option>
-                                        <option value="Yes">Yes</option>
-                                        <option value="NO">No</option>
-                                    </select></td>
-                                <td><input type="number" style="width: 60px;font-size: 12pt;" name="a391"></td>
-                            </tr>
-                            <tr>
-                                <td><input type="number" name="a332" style="width: 40px;font-size: 12pt"></td>
-                                <td><select name="a342" style="width:100px  ;font-size: 12pt;height: 25px">
-                                        <option value="" disabled selected>Select Option</option>
-                                        <option value="Motorised Two Wheeler">Motorised Two Wheeler</option>
-                                        <option value="Auto Rickshaw">Auto Rickshaw</option>
-                                        <option value="Car/Jeep/Van/Taxi">Car/Jeep/Van/Taxi</option>
-                                        <option value="Bus">Bus</option>
-                                        <option value="Truck/Lorry">Truck/Lorry</option>
-                                        <option value="Heavy Articulated Vehicle/Trolly">Heavy Articulated
-                                            Vehicle/Trolly
-                                        </option>
-                                        <option value="Tempo/Tractor">Tempo/Tractor</option>
-                                        <option value="Bicycle">Bicycle</option>
-                                        <option value="Cycle Rickshaw">Cycle Rickshaw</option>
-                                        <option value="Hand Drawn Cart">Hand Drawn Cart</option>
-                                        <option value="Animal Drawn Cart">Animal Drawn Cart</option>
-                                        <option value="Others">Others</option>
-                                    </select>
-                                </td>
-                                <td><input type="text" style="width: 100px;font-size: 12pt" name="a352"></td>
-                                <td>
-                                    <select name="a362" style="width: 100px ;font-size: 12pt;height: 25px">
-                                        <option value="" disabled selected>Select Option</option>
-                                        <option value="Needs to be Towed">Needs to be Towed</option>
-                                        <option value="Can be driven away">Can be driven away</option>
-                                    </select>
-                                </td>
-                                <td><select name="a37A2" style="width: 150px ;font-size: 12pt;height: 25px">
-                                        <option value="" disabled selected>Select Option</option>
-                                        <option value="Normally Loaded">Normally Loaded</option>
-                                        <option value="Overloaded/Hanging">Overloaded/Hanging</option>
-                                        <option value="Empty">Empty</option>
-                                        <option value="Not Known">Not Known</option>
-                                    </select></td>
-                                <td><select name="a37B2" style="width: 150px ;font-size: 12pt;height: 25px">
-                                        <option value="" disabled selected>Select Option</option>
-                                        <option value="Normally Loaded">Normally Loaded</option>
-                                        <option value="Overloaded/Hanging">Overloaded/Hanging</option>
-                                        <option value="Empty">Empty</option>
-                                        <option value="Not Known">Not Known</option>
-                                    </select></td>
-                                <td><select name="a382" style="width: 90px ;font-size: 12pt;height: 25px">
-                                        <option value="" disabled selected>Select Option</option>
-                                        <option value="Yes">Yes</option>
-                                        <option value="NO">No</option>
-                                    </select></td>
-                                <td><input type="number" style="width: 60px;font-size: 12pt" name="a392"></td>
-                            </tr>
-                            <tr>
-                                <td><input type="number" name="a333" style="width: 40px;font-size: 12pt"></td>
-                                <td><select name="a343" style="width:100px  ;font-size: 12pt;height: 25px">
-                                        <option value="" disabled selected>Select Option</option>
-                                        <option value="Motorised Two Wheeler">Motorised Two Wheeler</option>
-                                        <option value="Auto Rickshaw">Auto Rickshaw</option>
-                                        <option value="Car/Jeep/Van/Taxi">Car/Jeep/Van/Taxi</option>
-                                        <option value="Bus">Bus</option>
-                                        <option value="Truck/Lorry">Truck/Lorry</option>
-                                        <option value="Heavy Articulated Vehicle/Trolly">Heavy Articulated
-                                            Vehicle/Trolly
-                                        </option>
-                                        <option value="Tempo/Tractor">Tempo/Tractor</option>
-                                        <option value="Bicycle">Bicycle</option>
-                                        <option value="Cycle Rickshaw">Cycle Rickshaw</option>
-                                        <option value="Hand Drawn Cart">Hand Drawn Cart</option>
-                                        <option value="Animal Drawn Cart">Animal Drawn Cart</option>
-                                        <option value="Others">Others</option>
-                                    </select>
-                                </td>
-                                <td><input type="text" style="width: 100px;font-size: 12pt" name="a353"></td>
-                                <td>
-                                    <select name="a363" style="width: 100px ;font-size: 12pt;height: 25px">
-                                        <option value="" disabled selected>Select Option</option>
-                                        <option value="Needs to be Towed">Needs to be Towed</option>
-                                        <option value="Can be driven away">Can be driven away</option>
-                                    </select>
-                                </td>
-                                <td><select name="a37A3" style="width: 150px ;font-size: 12pt;height: 25px">
-                                        <option value="" disabled selected>Select Option</option>
-                                        <option value="Normally Loaded">Normally Loaded</option>
-                                        <option value="Overloaded/Hanging">Overloaded/Hanging</option>
-                                        <option value="Empty">Empty</option>
-                                        <option value="Not Known">Not Known</option>
-                                    </select></td>
-                                <td><select name="a37B3" style="width: 150px ;font-size: 12pt;height: 25px">
-                                        <option value="" disabled selected>Select Option</option>
-                                        <option value="Normally Loaded">Normally Loaded</option>
-                                        <option value="Overloaded/Hanging">Overloaded/Hanging</option>
-                                        <option value="Empty">Empty</option>
-                                        <option value="Not Known">Not Known</option>
-                                    </select></td>
-                                <td><select name="a383"
-                                        style="width: 90px ;font-size: 12pt;height: 25px ;font-size: 12pt;height: 25px">
-                                        <option value="" disabled selected>Select Option</option>
-                                        <option value="Yes">Yes</option>
-                                        <option value="NO">No</option>
-                                    </select></td>
-                                <td><input type="number" style="width: 60px;font-size: 12pt" name="a393"></td>
-                            </tr>
-                            <tr>
-                                <td><input type="number" name="a334" style="width: 40px;font-size: 12pt"></td>
-                                <td><select name="a344" style="width:100px ;font-size: 12pt;height: 25px">
-                                        <option value="" disabled selected>Select Option</option>
-                                        <option value="Motorised Two Wheeler">Motorised Two Wheeler</option>
-                                        <option value="Auto Rickshaw">Auto Rickshaw</option>
-                                        <option value="Car/Jeep/Van/Taxi">Car/Jeep/Van/Taxi</option>
-                                        <option value="Bus">Bus</option>
-                                        <option value="Truck/Lorry">Truck/Lorry</option>
-                                        <option value="Heavy Articulated Vehicle/Trolly">Heavy Articulated
-                                            Vehicle/Trolly
-                                        </option>
-                                        <option value="Tempo/Tractor">Tempo/Tractor</option>
-                                        <option value="Bicycle">Bicycle</option>
-                                        <option value="Cycle Rickshaw">Cycle Rickshaw</option>
-                                        <option value="Hand Drawn Cart">Hand Drawn Cart</option>
-                                        <option value="Animal Drawn Cart">Animal Drawn Cart</option>
-                                        <option value="Others">Others</option>
-                                    </select>
-                                </td>
-                                <td><input type="text" style="width: 100px;font-size: 12pt" name="a354"></td>
-                                <td>
-                                    <select name="a364" style="width: 100px ;font-size: 12pt;height: 25px">
-                                        <option value="" disabled selected>Select Option</option>
-                                        <option value="Needs to be Towed">Needs to be Towed</option>
-                                        <option value="Can be driven away">Can be driven away</option>
-                                    </select>
-                                </td>
-                                <td><select name="a37A4" style="width: 150px ;font-size: 12pt;height: 25px">
-                                        <option value="" disabled selected>Select Option</option>
-                                        <option value="Normally Loaded">Normally Loaded</option>
-                                        <option value="Overloaded/Hanging">Overloaded/Hanging</option>
-                                        <option value="Empty">Empty</option>
-                                        <option value="Not Known">Not Known</option>
-                                    </select></td>
-                                <td><select name="a37B4" style="width: 150px ;font-size: 12pt;height: 25px">
-                                        <option value="" disabled selected>Select Option</option>
-                                        <option value="Normally Loaded">Normally Loaded</option>
-                                        <option value="Overloaded/Hanging">Overloaded/Hanging</option>
-                                        <option value="Empty">Empty</option>
-                                        <option value="Not Known">Not Known</option>
-                                    </select></td>
-                                <td><select name="a384" style="width: 90px ;font-size: 12pt;height: 25px">
-                                        <option value="" disabled selected>Select Option</option>
-                                        <option value="Yes">Yes</option>
-                                        <option value="NO">No</option>
-                                    </select></td>
-                                <td><input type="number" style="width: 60px;font-size: 12pt" name="a394"></td>
-                            </tr>
-                            <tr>
-                                <td><input type="number" name="a335" style="width: 40px;font-size: 12pt"></td>
-                                <td><select name="a345" style="width:100px ;font-size: 12pt;height: 25px">
-                                        <option value="" disabled selected>Select Option</option>
-                                        <option value="Motorised Two Wheeler">Motorised Two Wheeler</option>
-                                        <option value="Auto Rickshaw">Auto Rickshaw</option>
-                                        <option value="Car/Jeep/Van/Taxi">Car/Jeep/Van/Taxi</option>
-                                        <option value="Bus">Bus</option>
-                                        <option value="Truck/Lorry">Truck/Lorry</option>
-                                        <option value="Heavy Articulated Vehicle/Trolly">Heavy Articulated
-                                            Vehicle/Trolly
-                                        </option>
-                                        <option value="Tempo/Tractor">Tempo/Tractor</option>
-                                        <option value="Bicycle">Bicycle</option>
-                                        <option value="Cycle Rickshaw">Cycle Rickshaw</option>
-                                        <option value="Hand Drawn Cart">Hand Drawn Cart</option>
-                                        <option value="Animal Drawn Cart">Animal Drawn Cart</option>
-                                        <option value="Others">Others</option>
-                                    </select>
-                                </td>
-                                <td><input type="text" style="width: 100px;font-size: 12pt" name="a355"></td>
-                                <td>
-                                    <select name="a365" style="width: 100px ;font-size: 12pt;height: 25px">
-                                        <option value="" disabled selected>Select Option</option>
-                                        <option value="Needs to be Towed">Needs to be Towed</option>
-                                        <option value="Can be driven away">Can be driven away</option>
-                                    </select>
-                                </td>
-                                <td><select name="a37A5" style="width: 150px ;font-size: 12pt;height: 25px">
-                                        <option value="" disabled selected>Select Option</option>
-                                        <option value="Normally Loaded">Normally Loaded</option>
-                                        <option value="Overloaded/Hanging">Overloaded/Hanging</option>
-                                        <option value="Empty">Empty</option>
-                                        <option value="Not Known">Not Known</option>
-                                    </select></td>
-                                <td><select name="a37B5" style="width: 150px ;font-size: 12pt;height: 25px">
-                                        <option value="" disabled selected>Select Option</option>
-                                        <option value="Normally Loaded">Normally Loaded</option>
-                                        <option value="Overloaded/Hanging">Overloaded/Hanging</option>
-                                        <option value="Empty">Empty</option>
-                                        <option value="Not Known">Not Known</option>
-                                    </select></td>
-                                <td><select name="a385" style="width: 90px ;font-size: 12pt;height: 25px">
-                                        <option value="" disabled selected>Select Option</option>
-                                        <option value="Yes">Yes</option>
-                                        <option value="NO">No</option>
-                                    </select></td>
-                                <td><input type="number" style="width: 60px;font-size: 12pt" name="a395"></td>
-                            </tr>
-                            <tr>
-                                <td><input type="number" name="a336" style="width: 40px;font-size: 12pt"></td>
-                                <td><select name="a346" style="width:100px ;font-size: 12pt;height: 25px">
-                                        <option value="" disabled selected>Select Option</option>
-                                        <option value="Motorised Two Wheeler">Motorised Two Wheeler</option>
-                                        <option value="Auto Rickshaw">Auto Rickshaw</option>
-                                        <option value="Car/Jeep/Van/Taxi">Car/Jeep/Van/Taxi</option>
-                                        <option value="Bus">Bus</option>
-                                        <option value="Truck/Lorry">Truck/Lorry</option>
-                                        <option value="Heavy Articulated Vehicle/Trolly">Heavy Articulated
-                                            Vehicle/Trolly
-                                        </option>
-                                        <option value="Tempo/Tractor">Tempo/Tractor</option>
-                                        <option value="Bicycle">Bicycle</option>
-                                        <option value="Cycle Rickshaw">Cycle Rickshaw</option>
-                                        <option value="Hand Drawn Cart">Hand Drawn Cart</option>
-                                        <option value="Animal Drawn Cart">Animal Drawn Cart</option>
-                                        <option value="Others">Others</option>
-                                    </select>
-                                </td>
-                                <td><input type="text" style="width: 100px;font-size: 12pt" name="a356"></td>
-                                <td>
-                                    <select name="a366" style="width: 100px ;font-size: 12pt;height: 25px">
-                                        <option value="" disabled selected>Select Option</option>
-                                        <option value="Needs to be Towed">Needs to be Towed</option>
-                                        <option value="Can be driven away">Can be driven away</option>
-                                    </select>
-                                </td>
-                                <td><select name="a37A6" style="width: 150px ;font-size: 12pt;height: 25px">
-                                        <option value="" disabled selected>Select Option</option>
-                                        <option value="Normally Loaded">Normally Loaded</option>
-                                        <option value="Overloaded/Hanging">Overloaded/Hanging</option>
-                                        <option value="Empty">Empty</option>
-                                        <option value="Not Known">Not Known</option>
-                                    </select></td>
-                                <td><select name="a37B6" style="width: 150px ;font-size: 12pt;height: 25px">
-                                        <option value="" disabled selected>Select Option</option>
-                                        <option value="Normally Loaded">Normally Loaded</option>
-                                        <option value="Overloaded/Hanging">Overloaded/Hanging</option>
-                                        <option value="Empty">Empty</option>
-                                        <option value="Not Known">Not Known</option>
-                                    </select></td>
-                                <td><select name="a386" style="width: 90px ;font-size: 12pt;height: 25px">
-                                        <option value="" disabled selected>Select Option</option>
-                                        <option value="Yes">Yes</option>
-                                        <option value="NO">No</option>
-                                    </select></td>
-                                <td><input type="number" style="width: 60px;font-size: 12pt" name="a396"></td>
-                            </tr>
-                            <tr>
-                                <td><input type="number" name="a337" style="width: 40px;font-size: 12pt"></td>
-                                <td><select name="a347" style="width:100px ;font-size: 12pt;height: 25px">
-                                        <option value="" disabled selected>Select Option</option>
-                                        <option value="Motorised Two Wheeler">Motorised Two Wheeler</option>
-                                        <option value="Auto Rickshaw">Auto Rickshaw</option>
-                                        <option value="Car/Jeep/Van/Taxi">Car/Jeep/Van/Taxi</option>
-                                        <option value="Bus">Bus</option>
-                                        <option value="Truck/Lorry">Truck/Lorry</option>
-                                        <option value="Heavy Articulated Vehicle/Trolly">Heavy Articulated
-                                            Vehicle/Trolly
-                                        </option>
-                                        <option value="Tempo/Tractor">Tempo/Tractor</option>
-                                        <option value="Bicycle">Bicycle</option>
-                                        <option value="Cycle Rickshaw">Cycle Rickshaw</option>
-                                        <option value="Hand Drawn Cart">Hand Drawn Cart</option>
-                                        <option value="Animal Drawn Cart">Animal Drawn Cart</option>
-                                        <option value="Others">Others</option>
-                                    </select>
-                                </td>
-                                <td><input type="text" style="width: 100px;font-size: 12pt" name="a357"></td>
-                                <td>
-                                    <select name="a367" style="width: 100px ;font-size: 12pt;height: 25px">
-                                        <option value="" disabled selected>Select Option</option>
-                                        <option value="Needs to be Towed">Needs to be Towed</option>
-                                        <option value="Can be driven away">Can be driven away</option>
-                                    </select>
-                                </td>
-                                <td><select name="a37A7" style="width: 150px ;font-size: 12pt;height: 25px">
-                                        <option value="" disabled selected>Select Option</option>
-                                        <option value="Normally Loaded">Normally Loaded</option>
-                                        <option value="Overloaded/Hanging">Overloaded/Hanging</option>
-                                        <option value="Empty">Empty</option>
-                                        <option value="Not Known">Not Known</option>
-                                    </select></td>
-                                <td><select name="a37B7" style="width: 150px ;font-size: 12pt;height: 25px">
-                                        <option value="" disabled selected>Select Option</option>
-                                        <option value="Normally Loaded">Normally Loaded</option>
-                                        <option value="Overloaded/Hanging">Overloaded/Hanging</option>
-                                        <option value="Empty">Empty</option>
-                                        <option value="Not Known">Not Known</option>
-                                    </select></td>
-                                <td><select name="a387" style="width: 90px ;font-size: 12pt;height: 25px">
-                                        <option value="" disabled selected>Select Option</option>
-                                        <option value="Yes">Yes</option>
-                                        <option value="NO">No</option>
-                                    </select></td>
-                                <td><input type="number" style="width: 60px;font-size: 12pt" name="a397"></td>
-                            </tr>
-                        </table>
-                    </div>
-                </div>
+                </table>
 
 
-                <br>
-
-
-                <div>
-                    <h1
-                        style="font-size:150%;width: 100%;text-align:  left;opacity: 1; background-color: #c0c0c0;  color: #0099cc;padding-bottom: 10px;padding-top: 10px">
-                        &emsp;D. Driver Details</h1>
-                </div>
-                <div style="padding: 30px">
+                <div style="padding: 1px">
                     <div class="cont1 table-responsive">
-                        <table class="table">
-                            <tr>
-                                <th style="width: 30px">S.No.</th>
-                                <th style="width: 100px">Sex</th>
-                                <th style="width:150px">Impacting Vehicle</th>
-                                <th style="width: 30px">Age</th>
-                                <th style="width: 100px">Type of Licence</th>
-                                <th style="width: 60px">Licence No.</th>
-                                <th style="width: 150px">Type of Trafic Violation</th>
-                                <th style="width: 100px">Type of Injury</th>
-                                <th style="width: 200px">Using Requisite Safety Device</th>
-                            </tr>
-                            <tr>
-                                <td><input name="a401" type="number" style="width: 92%;font-size: 12pt"></td>
-                                <td><select name="a411" style="width: 100% ;font-size: 12pt;height: 25px">
-                                        <option value="" disabled selected>Select Option</option>
-                                        <option value="Female">Female</option>
-                                        <option value="Male">Male</option>
-                                    </select></td>
-                                <td><select name="a421" style="width:100%  ;font-size: 12pt;height: 25px">
-                                        <option value="" disabled selected>Select Option</option>
-                                        <option value="Motorised Two Wheeler">Motorised Two Wheeler</option>
-                                        <option value="Auto Rickshaw">Auto Rickshaw</option>
-                                        <option value="Car/Jeep/Van/Taxi">Car/Jeep/Van/Taxi</option>
-                                        <option value="Bus">Bus</option>
-                                        <option value="Truck/Lorry">Truck/Lorry</option>
-                                        <option value="Heavy Articulated Vehicle/Trolly">Heavy Articulated
-                                            Vehicle/Trolly
-                                        </option>
-                                        <option value="Tempo/Tractor">Tempo/Tractor</option>
-                                        <option value="Bicycle">Bicycle</option>
-                                        <option value="Cycle Rickshaw">Cycle Rickshaw</option>
-                                        <option value="Hand Drawn Cart">Hand Drawn Cart</option>
-                                        <option value="Animal Drawn Cart">Animal Drawn Cart</option>
-                                        <option value="Others">Others</option>
-                                    </select></td>
-                                <td><input type="number" style="width: 94%;font-size: 12pt" name="a431"></td>
-                                <td><select name="a441" style="width: 100% ;font-size: 12pt;height: 25px">
-                                        <option value="" disabled selected>Select Option</option>
-                                        <option value="Valid Permanent Licence">Valid Permanent Licence</option>
-                                        <option value="Learner Licence">Learner Licence</option>
-                                        <option value="Without Licence">Without Licence</option>
-                                    </select></td>
-                                <td><input type="number" style="width: 94%;font-size: 12pt" name="a451"></td>
-                                <td><select name="a461" style="width: 100% ;font-size: 12pt;height: 25px">
-                                        <option value="" disabled selected>Select Option</option>
-                                        <option value="Over Speeding">Over Speeding</option>
-                                        <option value="Jumping Red Light">Jumping Red Light</option>
-                                        <option value="Driving on the wrong side">Driving on the wrong side</option>
-                                        <option value="Drunk Driving">Drunk Driving</option>
-                                        <option value="Use of Mobile Phone">Use of Mobile Phone</option>
-                                        <option value="NO Violation">NO Violation</option>
-                                        <option value="Not Known">Not Known</option>
-                                    </select></td>
-                                <td><select name="a471" style="width: 100% ;font-size: 12pt;height: 25px">
-                                        <option value="" disabled selected>Select Option</option>
-                                        <option value="Fatal">Fatal</option>
-                                        <option value="Injury needing Hospitalisation">Injury needing
-                                            Hospitalisation
-                                        </option>
-                                        <option value="Injury NOT needing Hospitalisation">Injury NOT needing
-                                            Hospitalisation
-                                        </option>
-                                        <option value="No injury">No injury</option>
-                                        <option value="Not Known">Not Known</option>
-                                    </select></td>
-                                <td><select name="a481" style="width: 100% ;font-size: 12pt;height: 25px">
-                                        <option value="" disabled selected>Select Option</option>
-                                        <option value="Helmet Used">Helmet Used</option>
-                                        <option value="Helmet Not Used">Helmet Not Used</option>
-                                        <option value="Seat Belt Used">Seat Belt Used</option>
-                                        <option value="Seat Belt Not Used">Seat Belt Not Used</option>
-                                        <option value="Not Known">Not Known</option>
-                                    </select></td>
-                            </tr>
-                            <tr>
-                                <td><input name="a402" type="number" style="width: 92%;font-size: 12pt"></td>
-                                <td><select name="a412" style="width: 100% ;font-size: 12pt;height: 25px">
-                                        <option value="" disabled selected>Select Option</option>
-                                        <option value="Female">Female</option>
-                                        <option value="Male">Male</option>
-                                    </select></td>
-                                <td><select name="a422" style="width:100% ;font-size: 12pt;height: 25px">
-                                        <option value="" disabled selected>Select Option</option>
-                                        <option value="Motorised Two Wheeler">Motorised Two Wheeler</option>
-                                        <option value="Auto Rickshaw">Auto Rickshaw</option>
-                                        <option value="Car/Jeep/Van/Taxi">Car/Jeep/Van/Taxi</option>
-                                        <option value="Bus">Bus</option>
-                                        <option value="Truck/Lorry">Truck/Lorry</option>
-                                        <option value="Heavy Articulated Vehicle/Trolly">Heavy Articulated
-                                            Vehicle/Trolly
-                                        </option>
-                                        <option value="Tempo/Tractor">Tempo/Tractor</option>
-                                        <option value="Bicycle">Bicycle</option>
-                                        <option value="Cycle Rickshaw">Cycle Rickshaw</option>
-                                        <option value="Hand Drawn Cart">Hand Drawn Cart</option>
-                                        <option value="Animal Drawn Cart">Animal Drawn Cart</option>
-                                        <option value="Others">Others</option>
-                                    </select></td>
-                                <td><input type="number" style="width: 94%;font-size: 12pt" name="a432"></td>
-                                <td><select name="a442" style="width: 100% ;font-size: 12pt;height: 25px">
-
-                                        <option value="" disabled selected>Select Option</option>
-                                        <option value="Valid Permanent Licence">Valid Permanent Licence</option>
-                                        <option value="Learner Licence">Learner Licence</option>
-                                        <option value="Without Licence">Without Licence</option>
-                                    </select></td>
-                                <td><input type="number" style="width: 94%;font-size: 12pt" name="a452"></td>
-                                <td><select name="a462" style="width: 100% ;font-size: 12pt;height: 25px">
-                                        <option value="" disabled selected>Select Option</option>
-                                        <option value="Over Speeding">Over Speeding</option>
-                                        <option value="Jumping Red Light">Jumping Red Light</option>
-                                        <option value="Driving on the wrong side">Driving on the wrong side</option>
-                                        <option value="Drunk Driving">Drunk Driving</option>
-                                        <option value="Use of Mobile Phone">Use of Mobile Phone</option>
-                                        <option value="NO Violation">NO Violation</option>
-                                        <option value="Not Known">Not Known</option>
-                                    </select></td>
-                                <td><select name="a472" style="width: 100% ;font-size: 12pt;height: 25px">
-                                        <option value="" disabled selected>Select Option</option>
-                                        <option value="Fatal">Fatal</option>
-                                        <option value="Injury needing Hospitalisation">Injury needing
-                                            Hospitalisation
-                                        </option>
-                                        <option value="Injury NOT needing Hospitalisation">Injury NOT needing
-                                            Hospitalisation
-                                        </option>
-                                        <option value="No injury">No injury</option>
-                                        <option value="Not Known">Not Known</option>
-                                    </select></td>
-                                <td><select name="a482" style="width: 100% ;font-size: 12pt;height: 25px">
-                                        <option value="" disabled selected>Select Option</option>
-                                        <option value="Helmet Used">Helmet Used</option>
-                                        <option value="Helmet Not Used">Helmet Not Used</option>
-                                        <option value="Seat Belt Used">Seat Belt Used</option>
-                                        <option value="Seat Belt Not Used">Seat Belt Not Used</option>
-                                        <option value="Not Known">Not Known</option>
-                                    </select></td>
-                            </tr>
-                            <tr>
-                                <td><input name="a403" type="number" style="width: 92%;font-size: 12pt"></td>
-                                <td><select name="a413" style="width: 100% ;font-size: 12pt;height: 25px">
-                                        <option value="" disabled selected>Select Option</option>
-                                        <option value="Female">Female</option>
-                                        <option value="Male">Male</option>
-                                    </select></td>
-                                <td><select name="a423" style="width:100% ;font-size: 12pt;height: 25px">
-                                        <option value="" disabled selected>Select Option</option>
-                                        <option value="Motorised Two Wheeler">Motorised Two Wheeler</option>
-                                        <option value="Auto Rickshaw">Auto Rickshaw</option>
-                                        <option value="Car/Jeep/Van/Taxi">Car/Jeep/Van/Taxi</option>
-                                        <option value="Bus">Bus</option>
-                                        <option value="Truck/Lorry">Truck/Lorry</option>
-                                        <option value="Heavy Articulated Vehicle/Trolly">Heavy Articulated
-                                            Vehicle/Trolly
-                                        </option>
-                                        <option value="Tempo/Tractor">Tempo/Tractor</option>
-                                        <option value="Bicycle">Bicycle</option>
-                                        <option value="Cycle Rickshaw">Cycle Rickshaw</option>
-                                        <option value="Hand Drawn Cart">Hand Drawn Cart</option>
-                                        <option value="Animal Drawn Cart">Animal Drawn Cart</option>
-                                        <option value="Others">Others</option>
-                                    </select></td>
-                                <td><input type="number" style="width: 94%;font-size: 12pt" name="a433"></td>
-                                <td><select name="a443" style="width: 100% ;font-size: 12pt;height: 25px">
-                                        <option value="" disabled selected>Select Option</option>
-                                        <option value="Valid Permanent Licence">Valid Permanent Licence</option>
-                                        <option value="Learner Licence">Learner Licence</option>
-                                        <option value="Without Licence">Without Licence</option>
-                                    </select></td>
-                                <td><input type="number" style="width: 94%;font-size: 12pt" name="a453"></td>
-                                <td><select name="a463" style="width: 100% ;font-size: 12pt;height: 25px">
-                                        <option value="" disabled selected>Select Option</option>
-                                        <option value="Over Speeding">Over Speeding</option>
-                                        <option value="Jumping Red Light">Jumping Red Light</option>
-                                        <option value="Driving on the wrong side">Driving on the wrong side</option>
-                                        <option value="Drunk Driving">Drunk Driving</option>
-                                        <option value="Use of Mobile Phone">Use of Mobile Phone</option>
-                                        <option value="NO Violation">NO Violation</option>
-                                        <option value="Not Known">Not Known</option>
-                                    </select></td>
-                                <td><select name="a473" style="width: 100% ;font-size: 12pt;height: 25px">
-                                        <option value="" disabled selected>Select Option</option>
-                                        <option value="Fatal">Fatal</option>
-                                        <option value="Injury needing Hospitalisation">Injury needing
-                                            Hospitalisation
-                                        </option>
-                                        <option value="Injury NOT needing Hospitalisation">Injury NOT needing
-                                            Hospitalisation
-                                        </option>
-                                        <option value="No injury">No injury</option>
-                                        <option value="Not Known">Not Known</option>
-                                    </select></td>
-                                <td><select name="a483" style="width: 100% ;font-size: 12pt;height: 25px">
-                                        <option value="" disabled selected>Select Option</option>
-                                        <option value="Helmet Used">Helmet Used</option>
-                                        <option value="Helmet Not Used">Helmet Not Used</option>
-                                        <option value="Seat Belt Used">Seat Belt Used</option>
-                                        <option value="Seat Belt Not Used">Seat Belt Not Used</option>
-                                        <option value="Not Known">Not Known</option>
-                                    </select></td>
-                            </tr>
-                            <tr>
-                                <td><input name="a404" type="number" style="width: 92%;font-size: 12pt"></td>
-                                <td><select name="a414" style="width: 100% ;font-size: 12pt;height: 25px">
-                                        <option value="" disabled selected>Select Option</option>
-                                        <option value="Female">Female</option>
-                                        <option value="Male">Male</option>
-                                    </select></td>
-                                <td><select name="a424" style="width:100% ;font-size: 12pt;height: 25px">
-                                        <option value="" disabled selected>Select Option</option>
-                                        <option value="Motorised Two Wheeler">Motorised Two Wheeler</option>
-                                        <option value="Auto Rickshaw">Auto Rickshaw</option>
-                                        <option value="Car/Jeep/Van/Taxi">Car/Jeep/Van/Taxi</option>
-                                        <option value="Bus">Bus</option>
-                                        <option value="Truck/Lorry">Truck/Lorry</option>
-                                        <option value="Heavy Articulated Vehicle/Trolly">Heavy Articulated
-                                            Vehicle/Trolly
-                                        </option>
-                                        <option value="Tempo/Tractor">Tempo/Tractor</option>
-                                        <option value="Bicycle">Bicycle</option>
-                                        <option value="Cycle Rickshaw">Cycle Rickshaw</option>
-                                        <option value="Hand Drawn Cart">Hand Drawn Cart</option>
-                                        <option value="Animal Drawn Cart">Animal Drawn Cart</option>
-                                        <option value="Others">Others</option>
-                                    </select></td>
-                                <td><input type="number" style="width: 94%;font-size: 12pt" name="a434"></td>
-                                <td><select name="a444" style="width: 100% ;font-size: 12pt;height: 25px">
-                                        <option value="" disabled selected>Select Option</option>
-                                        <option value="Valid Permanent Licence">Valid Permanent Licence</option>
-                                        <option value="Learner Licence">Learner Licence</option>
-                                        <option value="Without Licence">Without Licence</option>
-                                    </select></td>
-                                <td><input type="number" style="width: 94%;font-size: 12pt" name="a454"></td>
-                                <td><select name="a464" style="width: 100% ;font-size: 12pt;height: 25px">
-                                        <option value="" disabled selected>Select Option</option>
-                                        <option value="Over Speeding">Over Speeding</option>
-                                        <option value="Jumping Red Light">Jumping Red Light</option>
-                                        <option value="Driving on the wrong side">Driving on the wrong side</option>
-                                        <option value="Drunk Driving">Drunk Driving</option>
-                                        <option value="Use of Mobile Phone">Use of Mobile Phone</option>
-                                        <option value="NO Violation">NO Violation</option>
-                                        <option value="Not Known">Not Known</option>
-                                    </select></td>
-                                <td><select name="a474" style="width: 100% ;font-size: 12pt;height: 25px">
-                                        <option value="" disabled selected>Select Option</option>
-                                        <option value="Fatal">Fatal</option>
-                                        <option value="Injury needing Hospitalisation">Injury needing
-                                            Hospitalisation
-                                        </option>
-                                        <option value="Injury NOT needing Hospitalisation">Injury NOT needing
-                                            Hospitalisation
-                                        </option>
-                                        <option value="No injury">No injury</option>
-                                        <option value="Not Known">Not Known</option>
-                                    </select></td>
-                                <td><select name="a484" style="width: 100% ;font-size: 12pt;height: 25px">
-                                        <option value="" disabled selected>Select Option</option>
-                                        <option value="Helmet Used">Helmet Used</option>
-                                        <option value="Helmet Not Used">Helmet Not Used</option>
-                                        <option value="Seat Belt Used">Seat Belt Used</option>
-                                        <option value="Seat Belt Not Used">Seat Belt Not Used</option>
-                                        <option value="Not Known">Not Known</option>
-                                    </select></td>
-                            </tr>
-                            <tr>
-                                <td><input name="a405" type="number" style="width: 92%;font-size: 12pt"></td>
-                                <td><select name="a415" style="width: 100% ;font-size: 12pt;height: 25px">
-                                        <option value="" disabled selected>Select Option</option>
-                                        <option value="Female">Female</option>
-                                        <option value="Male">Male</option>
-                                    </select></td>
-                                <td><select name="a425" style="width:100%  ;font-size: 12pt;height: 25px">
-                                        <option value="" disabled selected>Select Option</option>
-                                        <option value="Motorised Two Wheeler">Motorised Two Wheeler</option>
-                                        <option value="Auto Rickshaw">Auto Rickshaw</option>
-                                        <option value="Car/Jeep/Van/Taxi">Car/Jeep/Van/Taxi</option>
-                                        <option value="Bus">Bus</option>
-                                        <option value="Truck/Lorry">Truck/Lorry</option>
-                                        <option value="Heavy Articulated Vehicle/Trolly">Heavy Articulated
-                                            Vehicle/Trolly
-                                        </option>
-                                        <option value="Tempo/Tractor">Tempo/Tractor</option>
-                                        <option value="Bicycle">Bicycle</option>
-                                        <option value="Cycle Rickshaw">Cycle Rickshaw</option>
-                                        <option value="Hand Drawn Cart">Hand Drawn Cart</option>
-                                        <option value="Animal Drawn Cart">Animal Drawn Cart</option>
-                                        <option value="Others">Others</option>
-                                    </select></td>
-                                <td><input type="number" style="width: 94%;font-size: 12pt" name="a435"></td>
-                                <td><select name="a445" style="width: 100% ;font-size: 12pt;height: 25px">
-                                        <option value="" disabled selected>Select Option</option>
-                                        <option value="Valid Permanent Licence">Valid Permanent Licence</option>
-                                        <option value="Learner Licence">Learner Licence</option>
-                                        <option value="Without Licence">Without Licence</option>
-                                    </select></td>
-                                <td><input type="number" style="width: 94%;font-size: 12pt" name="a455"></td>
-                                <td><select name="a465" style="width: 100% ;font-size: 12pt;height: 25px">
-                                        <option value="" disabled selected>Select Option</option>
-                                        <option value="Over Speeding">Over Speeding</option>
-                                        <option value="Jumping Red Light">Jumping Red Light</option>
-                                        <option value="Driving on the wrong side">Driving on the wrong side</option>
-                                        <option value="Drunk Driving">Drunk Driving</option>
-                                        <option value="Use of Mobile Phone">Use of Mobile Phone</option>
-                                        <option value="NO Violation">NO Violation</option>
-                                        <option value="Not Known">Not Known</option>
-                                    </select></td>
-                                <td><select name="a475" style="width: 100% ;font-size: 12pt;height: 25px">
-                                        <option value="" disabled selected>Select Option</option>
-                                        <option value="Fatal">Fatal</option>
-                                        <option value="Injury needing Hospitalisation">Injury needing
-                                            Hospitalisation
-                                        </option>
-                                        <option value="Injury NOT needing Hospitalisation">Injury NOT needing
-                                            Hospitalisation
-                                        </option>
-                                        <option value="No injury">No injury</option>
-                                        <option value="Not Known">Not Known</option>
-                                    </select></td>
-                                <td><select name="a485" style="width: 100% ;font-size: 12pt;height: 25px">
-                                        <option value="" disabled selected>Select Option</option>
-                                        <option value="Helmet Used">Helmet Used</option>
-                                        <option value="Helmet Not Used">Helmet Not Used</option>
-                                        <option value="Seat Belt Used">Seat Belt Used</option>
-                                        <option value="Seat Belt Not Used">Seat Belt Not Used</option>
-
-                                        <option value="Not Known">Not Known</option>
-                                    </select></td>
-                            </tr>
-                            <tr>
-                                <td><input name="a406" type="number" style="width: 92%;font-size: 12pt"></td>
-                                <td><select name="a416" style="width: 100% ;font-size: 12pt;height: 25px">
-                                        <option value="" disabled selected>Select Option</option>
-                                        <option value="Female">Female</option>
-                                        <option value="Male">Male</option>
-                                    </select></td>
-                                <td><select name="a426" style="width:100%  ;font-size: 12pt;height: 25px">
-                                        <option value="" disabled selected>Select Option</option>
-                                        <option value="Motorised Two Wheeler">Motorised Two Wheeler</option>
-                                        <option value="Auto Rickshaw">Auto Rickshaw</option>
-                                        <option value="Car/Jeep/Van/Taxi">Car/Jeep/Van/Taxi</option>
-                                        <option value="Bus">Bus</option>
-                                        <option value="Truck/Lorry">Truck/Lorry</option>
-                                        <option value="Heavy Articulated Vehicle/Trolly">Heavy Articulated
-                                            Vehicle/Trolly
-                                        </option>
-                                        <option value="Tempo/Tractor">Tempo/Tractor</option>
-                                        <option value="Bicycle">Bicycle</option>
-                                        <option value="Cycle Rickshaw">Cycle Rickshaw</option>
-                                        <option value="Hand Drawn Cart">Hand Drawn Cart</option>
-                                        <option value="Animal Drawn Cart">Animal Drawn Cart</option>
-                                        <option value="Others">Others</option>
-                                    </select></td>
-                                <td><input type="number" style="width: 94%;font-size: 12pt" name="a436"></td>
-                                <td><select name="a446" style="width: 100% ;font-size: 12pt;height: 25px">
-                                        <option value="" disabled selected>Select Option</option>
-                                        <option value="Valid Permanent Licence">Valid Permanent Licence</option>
-                                        <option value="Learner Licence">Learner Licence</option>
-                                        <option value="Without Licence">Without Licence</option>
-                                    </select></td>
-                                <td><input type="number" style="width: 94%;font-size: 12pt" name="a456"></td>
-                                <td><select name="a466" style="width: 100% ;font-size: 12pt;height: 25px">
-                                        <option value="" disabled selected>Select Option</option>
-                                        <option value="Over Speeding">Over Speeding</option>
-                                        <option value="Jumping Red Light">Jumping Red Light</option>
-                                        <option value="Driving on the wrong side">Driving on the wrong side</option>
-                                        <option value="Drunk Driving">Drunk Driving</option>
-                                        <option value="Use of Mobile Phone">Use of Mobile Phone</option>
-                                        <option value="NO Violation">NO Violation</option>
-                                        <option value="Not Known">Not Known</option>
-                                    </select></td>
-                                <td><select name="a476" style="width: 100% ;font-size: 12pt;height: 25px">
-                                        <option value="" disabled selected>Select Option</option>
-                                        <option value="Fatal">Fatal</option>
-                                        <option value="Injury needing Hospitalisation">Injury needing
-                                            Hospitalisation
-                                        </option>
-                                        <option value="Injury NOT needing Hospitalisation">Injury NOT needing
-                                            Hospitalisation
-                                        </option>
-                                        <option value="No injury">No injury</option>
-                                        <option value="Not Known">Not Known</option>
-                                    </select></td>
-                                <td><select name="a486" style="width: 100% ;font-size: 12pt;height: 25px">
-                                        <option value="" disabled selected>Select Option</option>
-                                        <option value="Helmet Used">Helmet Used</option>
-                                        <option value="Helmet Not Used">Helmet Not Used</option>
-                                        <option value="Seat Belt Used">Seat Belt Used</option>
-                                        <option value="Seat Belt Not Used">Seat Belt Not Used</option>
-                                        <option value="Not Known">Not Known</option>
-                                    </select></td>
-                            </tr>
-                            <tr>
-                                <td><input name="a407" type="number" style="width: 92%;font-size: 12pt"></td>
-                                <td><select name="a417" style="width: 100% ;font-size: 12pt;height: 25px">
-                                        <option value="" disabled selected>Select Option</option>
-                                        <option value="Female">Female</option>
-                                        <option value="Male">Male</option>
-                                    </select></td>
-                                <td><select name="a427" style="width:100% ;font-size: 12pt;height: 25px">
-                                        <option value="" disabled selected>Select Option</option>
-                                        <option value="Motorised Two Wheeler">Motorised Two Wheeler</option>
-                                        <option value="Auto Rickshaw">Auto Rickshaw</option>
-                                        <option value="Car/Jeep/Van/Taxi">Car/Jeep/Van/Taxi</option>
-                                        <option value="Bus">Bus</option>
-                                        <option value="Truck/Lorry">Truck/Lorry</option>
-                                        <option value="Heavy Articulated Vehicle/Trolly">Heavy Articulated
-                                            Vehicle/Trolly
-                                        </option>
-                                        <option value="Tempo/Tractor">Tempo/Tractor</option>
-                                        <option value="Bicycle">Bicycle</option>
-                                        <option value="Cycle Rickshaw">Cycle Rickshaw</option>
-                                        <option value="Hand Drawn Cart">Hand Drawn Cart</option>
-                                        <option value="Animal Drawn Cart">Animal Drawn Cart</option>
-                                        <option value="Others">Others</option>
-                                    </select></td>
-                                <td><input type="number" style="width: 94%;font-size: 12pt" name="a437"></td>
-                                <td><select name="a447" style="width: 100% ;font-size: 12pt;height: 25px">
-                                        <option value="" disabled selected>Select Option</option>
-
-                                        <option value="Valid Permanent Licence">Valid Permanent Licence</option>
-                                        <option value="Learner Licence">Learner Licence</option>
-                                        <option value="Without Licence">Without Licence</option>
-                                    </select></td>
-                                <td><input type="number" style="width: 94%;font-size: 12pt" name="a457"></td>
-                                <td><select name="a467" style="width: 100% ;font-size: 12pt;height: 25px">
-                                        <option value="" disabled selected>Select Option</option>
-                                        <option value="Over Speeding">Over Speeding</option>
-                                        <option value="Jumping Red Light">Jumping Red Light</option>
-                                        <option value="Driving on the wrong side">Driving on the wrong side</option>
-                                        <option value="Drunk Driving">Drunk Driving</option>
-                                        <option value="Use of Mobile Phone">Use of Mobile Phone</option>
-                                        <option value="NO Violation">NO Violation</option>
-                                        <option value="Not Known">Not Known</option>
-                                    </select></td>
-                                <td><select name="a477" style="width: 100% ;font-size: 12pt;height: 25px">
-                                        <option value="" disabled selected>Select Option</option>
-                                        <option value="Fatal">Fatal</option>
-                                        <option value="Injury needing Hospitalisation">Injury needing
-                                            Hospitalisation
-                                        </option>
-                                        <option value="Injury NOT needing Hospitalisation">Injury NOT needing
-                                            Hospitalisation
-                                        </option>
-                                        <option value="No injury">No injury</option>
-                                        <option value="Not Known">Not Known</option>
-                                    </select></td>
-                                <td><select name="a487" style="width: 100% ;font-size: 12pt;height: 25px">
-                                        <option value="" disabled selected>Select Option</option>
-                                        <option value="Helmet Used">Helmet Used</option>
-                                        <option value="Helmet Not Used">Helmet Not Used</option>
-                                        <option value="Seat Belt Used">Seat Belt Used</option>
-                                        <option value="Seat Belt Not Used">Seat Belt Not Used</option>
-                                        <option value="Not Known">Not Known</option>
-                                    </select></td>
-                            </tr>
-                        </table>
-                    </div>
-                </div>
-                <br>
-
-
-                <div>
-                    <h1
-                        style="font-size:150%;width: 100%;text-align:  left;opacity: 1; background-color: #c0c0c0;  color: #0099cc;padding-bottom: 10px;padding-top: 10px">
-                        &emsp;E. Persons Other Than Drivers Involved in the Accident</h1>
-                </div>
-                <div style="padding: 30px">
-                    <div class="cont1 table-responsive">
-                        <table class="table">
-                            <tr>
-                                <th>S.No.</th>
-                                <th>Persons Involved</th>
-                                <th>Sex</th>
-                                <th>Age</th>
-                                <th>Impacting Vehicle</th>
-                                <th>Type of Injury</th>
-                                <th>Using Requisite Safety Device</th>
-                            </tr>
-                            <tr>
-                                <td><input name="a491" type="number" style="width: 92%;font-size: 12pt"></td>
-                                <td><select name="a501" style="width: 100% ;font-size: 12pt;height: 25px">
-                                        <option value="" disabled selected>Select Option</option>
-                                        <option value="Passenger">Passenger</option>
-                                        <option value="Pedestrian">Pedestrian</option>
-                                        <option value="Cyclist">Cyclist</option>
-                                    </select></td>
-                                <td><select name="a511" style="width: 100% ;font-size: 12pt;height: 25px">
-                                        <option value="" disabled selected>Select Option</option>
-                                        <option value="Female">Female</option>
-                                        <option value="Male">Male</option>
-                                    </select></td>
-
-                                <td><input type="number" style="width: 94%;font-size: 12pt" name="a521"></td>
-                                <td><select name="a531" style="width:100%  ;font-size: 12pt;height: 25px">
-                                        <option value="" disabled selected>Select Option</option>
-                                        <option value="Motorised Two Wheeler">Motorised Two Wheeler</option>
-                                        <option value="Auto Rickshaw">Auto Rickshaw</option>
-                                        <option value="Car/Jeep/Van/Taxi">Car/Jeep/Van/Taxi</option>
-                                        <option value="Bus">Bus</option>
-                                        <option value="Truck/Lorry">Truck/Lorry</option>
-                                        <option value="Heavy Articulated Vehicle/Trolly">Heavy Articulated
-                                            Vehicle/Trolly
-                                        </option>
-                                        <option value="Tempo/Tractor">Tempo/Tractor</option>
-                                        <option value="Bicycle">Bicycle</option>
-                                        <option value="Cycle Rickshaw">Cycle Rickshaw</option>
-                                        <option value="Hand Drawn Cart">Hand Drawn Cart</option>
-                                        <option value="Animal Drawn Cart">Animal Drawn Cart</option>
-                                        <option value="Others">Others</option>
-                                    </select></td>
-                                <td><select name="a541" style="width: 100% ;font-size: 12pt;height: 25px">
-                                        <option value="" disabled selected>Select Option</option>
-                                        <option value="Fatal">Fatal</option>
-                                        <option value="Injury needing Hospitalisation">Injury needing
-                                            Hospitalisation
-                                        </option>
-                                        <option value="Injury NOT needing Hospitalisation">Injury NOT needing
-                                            Hospitalisation
-                                        </option>
-                                        <option value="No injury">No injury</option>
-                                        <option value="Not Known">Not Known</option>
-                                    </select></td>
-                                <td><select name="a551" style="width: 100% ;font-size: 12pt;height: 25px">
-                                        <option value="" disabled selected>Select Option</option>
-                                        <option value="Helmet Used">Helmet Used</option>
-                                        <option value="Helmet Not Used">Helmet Not Used</option>
-                                        <option value="Seat Belt Used">Seat Belt Used</option>
-                                        <option value="Seat Belt Not Used">Seat Belt Not Used</option>
-                                        <option value="Not Known">Not Known</option>
-                                    </select></td>
-                            </tr>
-                            <tr>
-                                <td><input name="a492" type="number" style="width: 92%;font-size: 12pt"></td>
-                                <td><select name="a502" style="width: 100% ;font-size: 12pt;height: 25px">
-                                        <option value="" disabled selected>Select Option</option>
-                                        <option value="Passenger">Passenger</option>
-                                        <option value="Pedestrian">Pedestrian</option>
-                                        <option value="Cyclist">Cyclist</option>
-                                    </select></td>
-                                <td><select name="a512" style="width: 100% ;font-size: 12pt;height: 25px">
-                                        <option value="" disabled selected>Select Option</option>
-                                        <option value="Female">Female</option>
-                                        <option value="Male">Male</option>
-                                    </select></td>
-
-                                <td><input type="number" style="width: 94%;font-size: 12pt" name="a522"></td>
-                                <td><select name="a532" style="width:100% ;font-size: 12pt;height: 25px">
-                                        <option value="" disabled selected>Select Option</option>
-                                        <option value="Motorised Two Wheeler">Motorised Two Wheeler</option>
-                                        <option value="Auto Rickshaw">Auto Rickshaw</option>
-                                        <option value="Car/Jeep/Van/Taxi">Car/Jeep/Van/Taxi</option>
-                                        <option value="Bus">Bus</option>
-                                        <option value="Truck/Lorry">Truck/Lorry</option>
-                                        <option value="Heavy Articulated Vehicle/Trolly">Heavy Articulated
-                                            Vehicle/Trolly
-                                        </option>
-                                        <option value="Tempo/Tractor">Tempo/Tractor</option>
-                                        <option value="Bicycle">Bicycle</option>
-                                        <option value="Cycle Rickshaw">Cycle Rickshaw</option>
-                                        <option value="Hand Drawn Cart">Hand Drawn Cart</option>
-                                        <option value="Animal Drawn Cart">Animal Drawn Cart</option>
-                                        <option value="Others">Others</option>
-                                    </select></td>
-                                <td><select name="a542" style="width: 100% ;font-size: 12pt;height: 25px">
-                                        <option value="" disabled selected>Select Option</option>
-                                        <option value="Fatal">Fatal</option>
-                                        <option value="Injury needing Hospitalisation">Injury needing
-                                            Hospitalisation
-                                        </option>
-                                        <option value="Injury NOT needing Hospitalisation">Injury NOT needing
-                                            Hospitalisation
-                                        </option>
-                                        <option value="No injury">No injury</option>
-                                        <option value="Not Known">Not Known</option>
-                                    </select></td>
-                                <td><select name="a552" style="width: 100% ;font-size: 12pt;height: 25px">
-                                        <option value="" disabled selected>Select Option</option>
-                                        <option value="Helmet Used">Helmet Used</option>
-                                        <option value="Helmet Not Used">Helmet Not Used</option>
-                                        <option value="Seat Belt Used">Seat Belt Used</option>
-                                        <option value="Seat Belt Not Used">Seat Belt Not Used</option>
-                                        <option value="Not Known">Not Known</option>
-                                    </select></td>
-                            </tr>
-                            <tr>
-                                <td><input name="a493" type="number" style="width: 92%;font-size: 12pt"></td>
-                                <td><select name="a503" style="width: 100% ;font-size: 12pt;height: 25px">
-                                        <option value="" disabled selected>Select Option</option>
-                                        <option value="Passenger">Passenger</option>
-                                        <option value="Pedestrian">Pedestrian</option>
-                                        <option value="Cyclist">Cyclist</option>
-                                    </select></td>
-                                <td><select name="a513" style="width: 100% ;font-size: 12pt;height: 25px">
-                                        <option value="" disabled selected>Select Option</option>
-                                        <option value="Female">Female</option>
-                                        <option value="Male">Male</option>
-                                    </select></td>
-
-                                <td><input type="number" style="width: 94%;font-size: 12pt" name="a523"></td>
-                                <td><select name="a533" style="width:100%  ;font-size: 12pt;height: 25px">
-                                        <option value="" disabled selected>Select Option</option>
-                                        <option value="Motorised Two Wheeler">Motorised Two Wheeler</option>
-                                        <option value="Auto Rickshaw">Auto Rickshaw</option>
-                                        <option value="Car/Jeep/Van/Taxi">Car/Jeep/Van/Taxi</option>
-                                        <option value="Bus">Bus</option>
-                                        <option value="Truck/Lorry">Truck/Lorry</option>
-                                        <option value="Heavy Articulated Vehicle/Trolly">Heavy Articulated
-                                            Vehicle/Trolly
-                                        </option>
-                                        <option value="Tempo/Tractor">Tempo/Tractor</option>
-                                        <option value="Bicycle">Bicycle</option>
-                                        <option value="Cycle Rickshaw">Cycle Rickshaw</option>
-                                        <option value="Hand Drawn Cart">Hand Drawn Cart</option>
-                                        <option value="Animal Drawn Cart">Animal Drawn Cart</option>
-                                        <option value="Others">Others</option>
-                                    </select></td>
-                                <td><select name="a543" style="width: 100% ;font-size: 12pt;height: 25px">
-                                        <option value="" disabled selected>Select Option</option>
-                                        <option value="Fatal">Fatal</option>
-                                        <option value="Injury needing Hospitalisation">Injury needing
-                                            Hospitalisation
-                                        </option>
-                                        <option value="Injury NOT needing Hospitalisation">Injury NOT needing
-                                            Hospitalisation
-                                        </option>
-                                        <option value="No injury">No injury</option>
-                                        <option value="Not Known">Not Known</option>
-                                    </select></td>
-                                <td><select name="a553" style="width: 100% ;font-size: 12pt;height: 25px">
-                                        <option value="" disabled selected>Select Option</option>
-                                        <option value="Helmet Used">Helmet Used</option>
-                                        <option value="Helmet Not Used">Helmet Not Used</option>
-                                        <option value="Seat Belt Used">Seat Belt Used</option>
-                                        <option value="Seat Belt Not Used">Seat Belt Not Used</option>
-                                        <option value="Not Known">Not Known</option>
-                                    </select></td>
-                            </tr>
-                            <tr>
-                                <td><input name="a494" type="number" style="width: 92%;font-size: 12pt"></td>
-                                <td><select name="a504" style="width: 100% ;font-size: 12pt;height: 25px">
-                                        <option value="" disabled selected>Select Option</option>
-                                        <option value="Passenger">Passenger</option>
-                                        <option value="Pedestrian">Pedestrian</option>
-                                        <option value="Cyclist">Cyclist</option>
-                                    </select></td>
-                                <td><select name="a514" style="width: 100% ;font-size: 12pt;height: 25px">
-                                        <option value="" disabled selected>Select Option</option>
-                                        <option value="Female">Female</option>
-                                        <option value="Male">Male</option>
-                                    </select></td>
-
-                                <td><input type="number" style="width: 94%;font-size: 12pt" name="a524"></td>
-                                <td><select name="a534" style="width:100% ;font-size: 12pt;height: 25px">
-                                        <option value="" disabled selected>Select Option</option>
-                                        <option value="Motorised Two Wheeler">Motorised Two Wheeler</option>
-                                        <option value="Auto Rickshaw">Auto Rickshaw</option>
-                                        <option value="Car/Jeep/Van/Taxi">Car/Jeep/Van/Taxi</option>
-                                        <option value="Bus">Bus</option>
-                                        <option value="Truck/Lorry">Truck/Lorry</option>
-                                        <option value="Heavy Articulated Vehicle/Trolly">Heavy Articulated
-                                            Vehicle/Trolly
-                                        </option>
-                                        <option value="Tempo/Tractor">Tempo/Tractor</option>
-                                        <option value="Bicycle">Bicycle</option>
-                                        <option value="Cycle Rickshaw">Cycle Rickshaw</option>
-                                        <option value="Hand Drawn Cart">Hand Drawn Cart</option>
-                                        <option value="Animal Drawn Cart">Animal Drawn Cart</option>
-                                        <option value="Others">Others</option>
-                                    </select></td>
-                                <td><select name="a544" style="width: 100% ;font-size: 12pt;height: 25px">
-                                        <option value="" disabled selected>Select Option</option>
-                                        <option value="Fatal">Fatal</option>
-                                        <option value="Injury needing Hospitalisation">Injury needing
-                                            Hospitalisation
-                                        </option>
-                                        <option value="Injury NOT needing Hospitalisation">Injury NOT needing
-                                            Hospitalisation
-                                        </option>
-                                        <option value="No injury">No injury</option>
-                                        <option value="Not Known">Not Known</option>
-                                    </select></td>
-                                <td><select name="a554" style="width: 100% ;font-size: 12pt;height: 25px">
-                                        <option value="" disabled selected>Select Option</option>
-                                        <option value="Helmet Used">Helmet Used</option>
-                                        <option value="Helmet Not Used">Helmet Not Used</option>
-                                        <option value="Seat Belt Used">Seat Belt Used</option>
-                                        <option value="Seat Belt Not Used">Seat Belt Not Used</option>
-                                        <option value="Not Known">Not Known</option>
-                                    </select></td>
-                            </tr>
-                            <tr>
-                                <td><input name="a495" type="number" style="width: 92%;font-size: 12pt"></td>
-                                <td><select name="a505" style="width: 100% ;font-size: 12pt;height: 25px">
-                                        <option value="" disabled selected>Select Option</option>
-                                        <option value="Passenger">Passenger</option>
-                                        <option value="Pedestrian">Pedestrian</option>
-                                        <option value="Cyclist">Cyclist</option>
-                                    </select></td>
-                                <td><select name="a515" style="width: 100% ;font-size: 12pt;height: 25px">
-                                        <option value="" disabled selected>Select Option</option>
-                                        <option value="Female">Female</option>
-                                        <option value="Male">Male</option>
-                                    </select></td>
-
-                                <td><input type="number" style="width: 94%;font-size: 12pt" name="a525"></td>
-                                <td><select name="a535" style="width:100%  ;font-size: 12pt;height: 25px">
-                                        <option value="" disabled selected>Select Option</option>
-                                        <option value="Motorised Two Wheeler">Motorised Two Wheeler</option>
-                                        <option value="Auto Rickshaw">Auto Rickshaw</option>
-                                        <option value="Car/Jeep/Van/Taxi">Car/Jeep/Van/Taxi</option>
-                                        <option value="Bus">Bus</option>
-                                        <option value="Truck/Lorry">Truck/Lorry</option>
-                                        <option value="Heavy Articulated Vehicle/Trolly">Heavy Articulated
-                                            Vehicle/Trolly
-                                        </option>
-                                        <option value="Tempo/Tractor">Tempo/Tractor</option>
-                                        <option value="Bicycle">Bicycle</option>
-                                        <option value="Cycle Rickshaw">Cycle Rickshaw</option>
-                                        <option value="Hand Drawn Cart">Hand Drawn Cart</option>
-                                        <option value="Animal Drawn Cart">Animal Drawn Cart</option>
-                                        <option value="Others">Others</option>
-                                    </select></td>
-                                <td><select name="a545" style="width: 100% ;font-size: 12pt;height: 25px">
-                                        <option value="" disabled selected>Select Option</option>
-                                        <option value="Fatal">Fatal</option>
-                                        <option value="Injury needing Hospitalisation">Injury needing
-                                            Hospitalisation
-                                        </option>
-                                        <option value="Injury NOT needing Hospitalisation">Injury NOT needing
-                                            Hospitalisation
-                                        </option>
-                                        <option value="No injury">No injury</option>
-                                        <option value="Not Known">Not Known</option>
-                                    </select></td>
-                                <td><select name="a555" style="width: 100% ;font-size: 12pt;height: 25px">
-                                        <option value="" disabled selected>Select Option</option>
-                                        <option value="Helmet Used">Helmet Used</option>
-                                        <option value="Helmet Not Used">Helmet Not Used</option>
-                                        <option value="Seat Belt Used">Seat Belt Used</option>
-                                        <option value="Seat Belt Not Used">Seat Belt Not Used</option>
-                                        <option value="Not Known">Not Known</option>
-                                    </select></td>
-                            </tr>
-                            <tr>
-                                <td><input name="a496" type="number" style="width: 92%;font-size: 12pt"></td>
-                                <td><select name="a506" style="width: 100% ;font-size: 12pt;height: 25px">
-                                        <option value="" disabled selected>Select Option</option>
-                                        <option value="Passenger">Passenger</option>
-                                        <option value="Pedestrian">Pedestrian</option>
-                                        <option value="Cyclist">Cyclist</option>
-                                    </select></td>
-                                <td><select name="a516" style="width: 100% ;font-size: 12pt;height: 25px">
-                                        <option value="" disabled selected>Select Option</option>
-                                        <option value="Female">Female</option>
-                                        <option value="Male">Male</option>
-                                    </select></td>
-
-                                <td><input type="number" style="width: 94%;font-size: 12pt" name="a526"></td>
-                                <td><select name="a536" style="width:100% ;font-size: 12pt;height: 25px">
-                                        <option value="" disabled selected>Select Option</option>
-                                        <option value="Motorised Two Wheeler">Motorised Two Wheeler</option>
-                                        <option value="Auto Rickshaw">Auto Rickshaw</option>
-                                        <option value="Car/Jeep/Van/Taxi">Car/Jeep/Van/Taxi</option>
-                                        <option value="Bus">Bus</option>
-                                        <option value="Truck/Lorry">Truck/Lorry</option>
-                                        <option value="Heavy Articulated Vehicle/Trolly">Heavy Articulated
-                                            Vehicle/Trolly
-                                        </option>
-                                        <option value="Tempo/Tractor">Tempo/Tractor</option>
-                                        <option value="Bicycle">Bicycle</option>
-                                        <option value="Cycle Rickshaw">Cycle Rickshaw</option>
-                                        <option value="Hand Drawn Cart">Hand Drawn Cart</option>
-                                        <option value="Animal Drawn Cart">Animal Drawn Cart</option>
-                                        <option value="Others">Others</option>
-                                    </select></td>
-                                <td><select name="a546" style="width: 100% ;font-size: 12pt;height: 25px">
-                                        <option value="" disabled selected>Select Option</option>
-                                        <option value="Fatal">Fatal</option>
-                                        <option value="Injury needing Hospitalisation">Injury needing
-                                            Hospitalisation
-                                        </option>
-                                        <option value="Injury NOT needing Hospitalisation">Injury NOT needing
-                                            Hospitalisation
-                                        </option>
-                                        <option value="No injury">No injury</option>
-                                        <option value="Not Known">Not Known</option>
-                                    </select></td>
-                                <td><select name="a556" style="width: 100% ;font-size: 12pt;height: 25px">
-                                        <option value="" disabled selected>Select Option</option>
-                                        <option value="Helmet Used">Helmet Used</option>
-                                        <option value="Helmet Not Used">Helmet Not Used</option>
-                                        <option value="Seat Belt Used">Seat Belt Used</option>
-                                        <option value="Seat Belt Not Used">Seat Belt Not Used</option>
-                                        <option value="Not Known">Not Known</option>
-                                    </select></td>
-                            </tr>
-                            <tr>
-                                <td><input name="a497" type="number" style="width: 92%;font-size: 12pt"></td>
-                                <td><select name="a507" style="width: 100% ;font-size: 12pt;height: 25px">
-                                        <option value="" disabled selected>Select Option</option>
-                                        <option value="Passenger">Passenger</option>
-                                        <option value="Pedestrian">Pedestrian</option>
-                                        <option value="Cyclist">Cyclist</option>
-                                    </select></td>
-                                <td><select name="a517" style="width: 100% ;font-size: 12pt;height: 25px">
-                                        <option value="" disabled selected>Select Option</option>
-                                        <option value="Female">Female</option>
-                                        <option value="Male">Male</option>
-                                    </select></td>
-
-                                <td><input type="number" style="width: 94%;font-size: 12pt" name="a527"></td>
-                                <td><select name="a537" style="width:100% ;font-size: 12pt;height: 25px">
-                                        <option value="" disabled selected>Select Option</option>
-                                        <option value="Motorised Two Wheeler">Motorised Two Wheeler</option>
-                                        <option value="Auto Rickshaw">Auto Rickshaw</option>
-                                        <option value="Car/Jeep/Van/Taxi">Car/Jeep/Van/Taxi</option>
-                                        <option value="Bus">Bus</option>
-                                        <option value="Truck/Lorry">Truck/Lorry</option>
-                                        <option value="Heavy Articulated Vehicle/Trolly">Heavy Articulated
-                                            Vehicle/Trolly
-                                        </option>
-                                        <option value="Tempo/Tractor">Tempo/Tractor</option>
-                                        <option value="Bicycle">Bicycle</option>
-                                        <option value="Cycle Rickshaw">Cycle Rickshaw</option>
-                                        <option value="Hand Drawn Cart">Hand Drawn Cart</option>
-                                        <option value="Animal Drawn Cart">Animal Drawn Cart</option>
-                                        <option value="Others">Others</option>
-                                    </select></td>
-                                <td><select name="a547" style="width: 100% ;font-size: 12pt;height: 25px">
-                                        <option value="" disabled selected>Select Option</option>
-                                        <option value="Fatal">Fatal</option>
-                                        <option value="Injury needing Hospitalisation">Injury needing
-                                            Hospitalisation
-                                        </option>
-                                        <option value="Injury NOT needing Hospitalisation">Injury NOT needing
-                                            Hospitalisation
-                                        </option>
-                                        <option value="No injury">No injury</option>
-                                        <option value="Not Known">Not Known</option>
-                                    </select></td>
-                                <td><select name="a557" style="width: 100% ;font-size: 12pt;height: 25px">
-                                        <option value="" disabled selected>Select Option</option>
-                                        <option value="Helmet Used">Helmet Used</option>
-                                        <option value="Helmet Not Used">Helmet Not Used</option>
-                                        <option value="Seat Belt Used">Seat Belt Used</option>
-                                        <option value="Seat Belt Not Used">Seat Belt Not Used</option>
-                                        <option value="Not Known">Not Known</option>
-                                    </select></td>
-                            </tr>
-                        </table>
-                        <div class="col-sm-0"><textarea rows="6" name="remarks" cols="147" placeholder="REMARKS"
-                                style="font-size: 12pt;border:solid  #fff"></textarea>
-                        </div>
-                    </div>
-                    <!-- </div>
-                <div class="cont1 row">
-                        <div class="col-sm-12">
-                            <br><label><b>Upload Files</b><br></label>
-                        </div>
-                </div> -->
-                    <!--<div class ="col-sm-12">Upload photos<input type="file" name="file[]" id="file" multiple="multiple" accept="image/*"></div>
-	        <div class ="col-sm-12">Upload Videos<input type="file" name="file[]" id="file" multiple="multiple" accept="video/*"></div>-->
-
-                    <div>
-                        <h1
-                            style="font-size:150%;width: 100%;text-align:  left;opacity: 1; background-color: #c0c0c0;  color: #0099cc;padding-bottom: 10px;padding-top: 10px">
-                            &emsp;F. Upload Files</h1>
-                    </div>
-                    <div style="padding: 1px">
-                        <div class="cont1 table-responsive">
-                            <table class="table">
-                                <tr>
-                                    <th>Upload Photos</th>
-                                    <th><input type="file" name="file1" id="file1" multiple
-                                            onchange="javascript:updateList1()" accept="image/*" /></th>
-                                    <th>Upload Videos</th>
-                                    <th><input type="file" name="file2" id="file2" multiple
-                                            onchange="javascript:updateList2()" accept="video/*" /></th>
-                                </tr>
-
-                                <tr>
-                                    <td>Selected Files</td>
-                                    <td>
-                                        <div style="margin-left: 13px; margin-top: 0px" id="fileList1"></div>
-                                    </td>
-                                    <td>Selected Files</td>
-                                    <td>
-                                        <div style="margin-left: 13px; padding-top: 0px" id="fileList2"></div>
-                                    </td>
-                                </tr>
-
-
-                            </table>
-                        </div>
-                    </div>
-                    </h1>
-                </div>
-
-                <div class="cont1 row">
-                    <div class="form-group col-sm-6">
                         <div class="row">
-                            <label class="control-label col-xs-10">&emsp;&emsp;&emsp;<b>Signature:</b><br></label>
-                            <div class="col-xs-5">
-                                <input style="margin-left:50px" type="text" placeholder="Enter your name"
-                                    name="District" class="form-control">
+                            <label class="control-label col-sm-5">&emsp;<b>18.Remark</b></label>
+                            <div class="col-sm-0"><textarea class="border ml-5" rows="6" name="remarks" cols="153"
+                                    placeholder="REMARKS" style="font-size: 12pt;border:solid  #fff"></textarea>
                             </div>
                         </div>
                     </div>
@@ -1960,28 +798,53 @@
 
 
 
-                <!-- <br><div class="cont1 row">
-                        <div class="col-sm-6">
-                            <div class="row">
-                                <label class="col-sm-5"><b>&emsp;&emsp;&emsp;&emsp;Upload Photos</b></label>
-                                <div class="col-sm-7">
-                                    <input type="file" name="file1" id="file1" multiple onchange="javascript:updateList1()" accept="image/*" />
-<br/><b>Selected files:</b>
-<div id="fileList1"></div>
-                                </div>
+
+                <div>
+                    <h1
+                        style="font-size:150%;width: 100%;text-align:  left;opacity: 1; background-color: #c0c0c0;  color: #0099cc;padding-top: 10px;padding-bottom: 10px">
+                        &emsp;D. Upload Files</h1>
+                </div>
+
+
+                <div style="padding: 20px">
+                    <div class="cont1 table-responsive">
+                        <table class="table">
+                            <tr>
+                                <th>Upload Photos</th>
+                                <th><input type="file" name="file1" id="file1" multiple
+                                        onchange="javascript:updateList1()" accept="image/*" /></th>
+                                <th>Upload Videos</th>
+                                <th><input type="file" name="file2" id="file2" multiple
+                                        onchange="javascript:updateList2()" accept="video/*" /></th>
+                            </tr>
+
+                            <tr>
+                                <td>Selected Files</td>
+                                <td>
+                                    <div style="margin-left: 13px; margin-top: 0px" id="fileList1"></div>
+                                </td>
+                                <td>Selected Files</td>
+                                <td>
+                                    <div style="margin-left: 13px; padding-top: 0px" id="fileList2"></div>
+                                </td>
+                            </tr>
+
+
+                        </table>
+                    </div>
+
+
+                    <div class="form-group col-sm-12 col-lg-6">
+                        <div class="row">
+                            <label class="control-label col-sm-5"><b>Signature:</b></label>
+                            <div class="col-sm-7">
+                                <input type="text" name="landmark" placeholder="Enter your name" class="form-control">
                             </div>
                         </div>
+                    </div>
+                </div>
 
-                        <div class="col-sm-6">
-                            <div class="row">
-                                <label class="col-sm-5"><b>&emsp;&emsp;&emsp;&emsp;Upload Videos</b></label>
-                                <div class="col-sm-7">
-                                    <input type="file" name="file2" id="file2" multiple onchange="javascript:updateList2()" accept="video/*" />
-<br><b>Selected files:</b>
-<div id="fileList2"></div>
-                                </div>
-                            </div>
-                        </div> -->
+
 
 
 
@@ -2009,222 +872,105 @@
                     }
                 </script>
 
-                <div style="padding: 10px;padding-bottom: 20px"><br><br><br><br><input type="submit" name="submit"
-                        value="Submit" style="align:center; width: 100px;height: 40px;font-size: 14pt;color:red">
-                </div>
 
-                <div style="padding: 10px; padding-bottom: 30px"><a href="#" id="print"><button
-                            onclick="javascript:printlayer('div-id-name')">Print</button></a>
-                    <div>
-                        <script>
-                            function printlayer(layer) {
-                                var generator = window.open(",'name,");
-                                var layetext = document.getElementById(layer);
-                                generator.document.write(layetext.innerHTML.replace("Print Me"));
+                <div class="row mx-auto">
+                    <div class="col-sm-4 col-lg-4 mb-1">
+                        <button class="btn-info btn btn-block" type="submit" name="submit">Submit Data</button>
+                    </div>
 
-                                generator.document.close();
-                                generator.print();
-                                generator.close();
-                            }
-                        </script>
-                        </fieldset>
-                        <br><br><br>
+                    <div class="col-sm-4 col-lg-4 mb-1">
+                        <button class="btn-info btn btn-block" id="submitButton" type="submit">Clear Form Data</button>
+                    </div>
+
+                    <div class="col-sm-4 col-lg-4">
+                        <button id="print" class="btn-info btn btn-block"
+                                onclick="javascript:printlayer('div-id-name')">Print Data</button>
+                        <div>
+                            <script>
+                                function printlayer(layer) {
+                                    var generator = window.open(",'name,");
+                                    var layetext = document.getElementById(layer);
+                                    generator.document.write(layetext.innerHTML.replace("Print Me"));
+
+                                    generator.document.close();
+                                    generator.print();
+                                    generator.close();
+                                }
+                            </script>
+                            </fieldset>
+
+                        </div>
                     </div>
                 </div>
-
-        </form><br><br><br>
-
-
-<!-- 
-
-        
-        <script type="text/javascript">
+            </div>
+    </div>
 
 
-            var map;
-            var markers = [];
+    </form><br><br><br>
 
-            function initMap() {
-                var latitude = 31.1471;
-                var longitude = 75.3412;
 
-                var myLatLng = { lat: latitude, lng: longitude };
 
-                map = new google.maps.Map(document.getElementById('map'), {
-                    center: myLatLng,
-                    zoom: 8,
-                    disableDoubleClickZoom: true, // disable the default map zoom on double click
-                });
 
-                // Create the search box and link it to the UI element.
-                var input = document.getElementById('pac-input');
-                var searchBox = new google.maps.places.SearchBox(input);
-                map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
 
-                // Bias the SearchBox results towards current map's viewport.
-                map.addListener('bounds_changed', function () {
-                    searchBox.setBounds(map.getBounds());
-                });
 
-                var marker = new google.maps.Marker({
-                    position: myLatLng,
-                    map: map,
-                    //title: 'Hello World'
+    <script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAVD1C8a29ZMRBRzgHCrEKBjOSvV2UFakw&libraries=places&callback=initMap"
+        async defer></script>
+    <script type="text/javascript">var mbsd_sane_enter_key = function () {
+            var input_types;
+            input_types = "input, select, button, textarea,checkmark,text";
 
-                    // setting latitude & longitude as title of the marker
-                    // title is shown when you hover over the marker
-                    title: latitude + ', ' + longitude
-                });
+            return $("body").on("keydown", input_types, function (e) {
+                var enter_key, form, input_array, move_direction, move_to, new_index, self, tab_index, tab_key;
+                enter_key = 13;
+                tab_key = 9;
 
-                // Listen for the event fired when the user selects a prediction and retrieve
-                // more details for that place.
-                searchBox.addListener('places_changed', function () {
-                    var places = searchBox.getPlaces();
+                if (e.keyCode === tab_key || e.keyCode === enter_key) {
+                    self = $(this);
 
-                    if (places.length == 0) {
-                        return;
+                    // some controls should react as designed when pressing enter
+                    if (e.keyCode === enter_key && self.prop('type') === "submit") {
+                        return true;
                     }
 
-                    // Clear out the old markers.
-                    markers.forEach(function (marker) {
-                        marker.setMap(null);
-                    });
-                    markers = [];
+                    form = self.parents('form:eq(0)');
 
-                    // For each place, get the icon, name and location.
-                    var bounds = new google.maps.LatLngBounds();
-                    places.forEach(function (place) {
-                        if (!place.geometry) {
-                            console.log("Returned place contains no geometry");
-                            return;
-                        }
-                        var icon = {
-                            url: place.icon,
-                            size: new google.maps.Size(71, 71),
-                            origin: new google.maps.Point(0, 0),
-                            anchor: new google.maps.Point(17, 34),
-                            scaledSize: new google.maps.Size(25, 25)
-                        };
-
-                        // Create a marker for each place.
-                        markers.push(new google.maps.Marker({
-                            map: map,
-                            icon: icon,
-                            title: place.name,
-                            position: place.geometry.location
-                        }));
-
-                        if (place.geometry.viewport) {
-                            // Only geocodes have viewport.
-                            bounds.union(place.geometry.viewport);
-                        } else {
-                            bounds.extend(place.geometry.location);
-                        }
-                    });
-                    map.fitBounds(bounds);
-                });
-
-                // Update lat/long value of div when anywhere in the map is clicked
-                /* google.maps.event.addListener(map,'click',function(event) {
-                        document.getElementById('latclicked1').value = event.latLng.lat();
-                        document.getElementById('longclicked1').value =  event.latLng.lng();
-                    });*/
-
-                // Update lat/long value of div when you move the mouse over the map
-                google.maps.event.addListener(map, 'mousemove', function (event) {
-                    document.getElementById('latmoved').innerHTML = event.latLng.lat();
-                    document.getElementById('longmoved').innerHTML = event.latLng.lng();
-                });
-
-
-                // Update lat/long value of div when the marker is clicked
-                marker.addListener('click', function (event) {
-                    document.getElementById('latclicked1').value = event.latLng.lat();
-                    document.getElementById('longclicked1').value = event.latLng.lng();
-                });
-
-                // Create new marker on double click event on the map
-                google.maps.event.addListener(map, 'dblclick', function (event) {
-                    markers.forEach(function (marker) {
-                        marker.setMap(null);
-                    });
-                    document.getElementById('latclicked1').value = event.latLng.lat();
-                    document.getElementById('longclicked1').value = event.latLng.lng();
-                    markers.push(new google.maps.Marker({
-                        position: event.latLng,
-                        map: map,
-                        title: event.latLng.lat() + ', ' + event.latLng.lng()
-                    }));
-
-                    // Update lat/long value of div when the marker is clicked
-                    marker.addListener('click', function () {
-                        document.getElementById('latclicked1').value = event.latLng.lat();
-                        document.getElementById('longclicked1').value = event.latLng.lng();
-                    });
-                });
-
-            }
-        </script> -->
-
-
-        <script
-            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAVD1C8a29ZMRBRzgHCrEKBjOSvV2UFakw&libraries=places&callback=initMap"
-            async defer></script>
-        <script type="text/javascript">var mbsd_sane_enter_key = function () {
-                var input_types;
-                input_types = "input, select, button, textarea,checkmark,text";
-
-                return $("body").on("keydown", input_types, function (e) {
-                    var enter_key, form, input_array, move_direction, move_to, new_index, self, tab_index, tab_key;
-                    enter_key = 13;
-                    tab_key = 9;
-
-                    if (e.keyCode === tab_key || e.keyCode === enter_key) {
-                        self = $(this);
-
-                        // some controls should react as designed when pressing enter
-                        if (e.keyCode === enter_key && self.prop('type') === "submit") {
-                            return true;
-                        }
-
-                        form = self.parents('form:eq(0)');
-
-                        // Sort by tab indexes if they exist
-                        tab_index = parseInt(self.attr('tabindex'));
-                        if (tab_index) {
-                            input_array = form.find("[tabindex]").filter(':visible').sort(function (a, b) {
-                                return parseInt($(a).attr('tabindex')) - parseInt($(b).attr('tabindex'));
-                            });
-                        } else {
-                            input_array = form.find(input_types).filter(':visible');
-                        }
-
-                        // reverse the direction if using shift
-                        move_direction = e.shiftKey ? -1 : 1;
-                        new_index = input_array.index(this) + move_direction;
-
-                        // wrap around the controls
-                        if (new_index === input_array.length) {
-                            new_index = 0;
-                        } else if (new_index === -1) {
-                            new_index = input_array.length - 1;
-                        }
-
-                        move_to = input_array.eq(new_index);
-                        move_to.focus();
-                        move_to.select();
-                        return false;
+                    // Sort by tab indexes if they exist
+                    tab_index = parseInt(self.attr('tabindex'));
+                    if (tab_index) {
+                        input_array = form.find("[tabindex]").filter(':visible').sort(function (a, b) {
+                            return parseInt($(a).attr('tabindex')) - parseInt($(b).attr('tabindex'));
+                        });
+                    } else {
+                        input_array = form.find(input_types).filter(':visible');
                     }
-                });
-            };
 
-            $(window).on('ready page:load', function () {
-                mbsd_sane_enter_key();
-            })</script>
+                    // reverse the direction if using shift
+                    move_direction = e.shiftKey ? -1 : 1;
+                    new_index = input_array.index(this) + move_direction;
+
+                    // wrap around the controls
+                    if (new_index === input_array.length) {
+                        new_index = 0;
+                    } else if (new_index === -1) {
+                        new_index = input_array.length - 1;
+                    }
+
+                    move_to = input_array.eq(new_index);
+                    move_to.focus();
+                    move_to.select();
+                    return false;
+                }
+            });
+        };
+
+        $(window).on('ready page:load', function () {
+            mbsd_sane_enter_key();
+        })</script>
 
     </div>
-    </body>
-    
+</body>
+
 
 </html>
 

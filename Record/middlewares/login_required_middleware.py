@@ -9,8 +9,7 @@ def login_required(get_response):
         user =  request.session.get('user')
         print(user,"user")
         if user:
-            print("already login")
-            return redirect(f'/?return_url={url}')
+            return render(request, 'index.html')
         else:
             print("Please Login ")
             url = request.path

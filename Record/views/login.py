@@ -27,14 +27,16 @@ class LoginView(View):
                 temp['phone'] = user.phone
                 temp['id'] = user.id
                 request.session['user'] = temp
-                print("Login success")
-                if LoginView.return_url:
-                    return redirect(LoginView.return_url)
-                return redirect('index') #redirect index from url name
+                print("Login success PPPPPPPPPPPPPPPPPPPPPPPP")
+                # if LoginView.return_url:
+                #     return redirect(LoginView.return_url)
+                return render(request, 'index.html') #render index from url name
             else:
+                print("LLLLLLLLLLLLLLLLLLLLLLLLLLLLLL")
                 return render(request, 'login.html' , {'error' : 'Please Enter Valide Email or Password'})        
             
         except:
+            print("KKKKKKKKKKKKKKKKKKKKKKKKKKK")
             return render(request, 'login.html' , {'error' : 'Please Enter Valide Email or Password'})
             
         

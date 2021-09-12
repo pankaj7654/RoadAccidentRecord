@@ -144,15 +144,16 @@ th, td {
     display: inline;
 }
 .backimg{
-    /* background-image: url("https://img.huffingtonpost.com/asset/56efdf821e00008700704c6b.gif?ops=scalefit_630_noupscale.gif"); */
-        height:50vh;
-        /* background: linear-gradient(rgba(0,0,0,.8),rgba(0,0,0,.8)) ,url(https://img.huffingtonpost.com/asset/56efdf821e00008700704c6b.gif?ops=scalefit_630_noupscale.gif); */
+        /* background-image: url("https://img.huffingtonpost.com/asset/56efdf821e00008700704c6b.gif?ops=scalefit_630_noupscale.gif"); */
+        height:55vh;
+        background: linear-gradient(rgba(0,0,0,.3),rgba(0,0,0,.3)) ,url(https://img.huffingtonpost.com/asset/56efdf821e00008700704c6b.gif?ops=scalefit_630_noupscale.gif); 
         background-size:cover;
         color:white;
-        padding-top: 90px;
+        padding-top: 20px;
 }
 .logoimg{
     background-size:cover;
+    /* height:100px; */
     /* opacity: 0.5;
     top: 0;
     left: 0;
