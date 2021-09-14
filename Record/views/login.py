@@ -1,7 +1,7 @@
 from django.views import View
 from django.shortcuts import render , redirect
 from django.contrib.auth.hashers import check_password , make_password
-from Record.models import User
+from Record.models.user import User
 
 
 
